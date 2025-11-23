@@ -1,0 +1,23 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#E3F2FD"/>
+  <defs>
+    <linearGradient id="newsGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42A5F5;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1E88E5;stop-opacity:0.5" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#newsGrad3)"/>
+  
+  <!-- Calendar/Event icon -->
+  <g transform="translate(150, 60)">
+    <rect x="0" y="10" width="100" height="90" rx="6" fill="#1E88E5" opacity="0.8"/>
+    <rect x="0" y="10" width="100" height="25" rx="6" fill="#1565C0"/>
+    <rect x="20" y="0" width="8" height="20" rx="4" fill="#1976D2"/>
+    <rect x="72" y="0" width="8" height="20" rx="4" fill="#1976D2"/>
+    <text x="50" y="70" font-family="Inter, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="700">15</text>
+  </g>
+  
+  <text x="200" y="200" font-family="Inter, sans-serif" font-size="16" fill="#1565C0" text-anchor="middle" font-weight="600">
+    Evento SUFED
+  </text>
+</svg>

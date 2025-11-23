@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Botones de Descarga SUFED</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body {
+            padding: 40px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-section h2 {
+            margin-bottom: 20px;
+            color: #1976D2;
+        }
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .test-info {
+            background: #E3F2FD;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="margin-bottom: 30px; color: #1976D2;">Test de Funcionalidad de Descarga de PDFs</h1>
+
+    <!-- Test 1: Botones básicos -->
+    <div class="test-section">
+        <h2>1. Botones de Descarga Básicos</h2>
+        <div class="button-group">
+            <button data-download-pdf="nice" aria-label="Descargar guías NICE">
+                Descargar NICE
+            </button>
+            <button data-download-pdf="jospt" aria-label="Descargar guías JOSPT">
+                Descargar JOSPT
+            </button>
+            <button data-download-pdf="iasp" aria-label="Descargar guías IASP">
+                Descargar IASP
+            </button>
+            <button data-download-pdf="lancet" aria-label="Descargar serie Lancet">
+                Descargar Lancet
+            </button>
+        </div>
+        <div class="test-info">
+            <strong>Prueba:</strong> Haz clic en cualquier botón. Deberías ver:
+            <ul style="margin: 8px 0 0 20px;">
+                <li>El botón entra en estado de carga (opacidad reducida)</li>
+                <li>Aparece una notificación en la esquina inferior derecha</li>
+                <li>El mensaje indica "Próximamente disponible" (ya que los PDFs no existen aún)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test 2: Botones con estilos de guideline card -->
+    <div class="test-section">
+        <h2>2. Botones Estilo Guideline Card</h2>
+        <div class="button-group">
+            <button class="guideline-card__link guideline-card__link--download"
+                    data-download-pdf="nice" 
+                    aria-label="Descargar interpretación SUFED de guías NICE">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M8 1v8m0 0L5 6m3 3l3-3M2 13h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Descargar interpretación SUFED
+            </button>
+            <button class="guideline-card__link guideline-card__link--download"
+                    data-download-pdf="como-leer-guia" 
+                    aria-label="Descargar guía de interpretación">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M8 1v8m0 0L5 6m3 3l3-3M2 13h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Cómo leer una guía clínica
+            </button>
+        </div>
+        <div class="test-info">
+            <strong>Prueba:</strong> Estos botones tienen el estilo de acento (verde azulado). Verifica:
+            <ul style="margin: 8px 0 0 20px;">
+                <li>Color de fondo diferente al botón primario</li>
+                <li>Efecto hover con elevación</li>
+                <li>Icono de descarga visible</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test 3: Estados de accesibilidad -->
+    <div class="test-section">
+        <h2>3. Pruebas de Accesibilidad</h2>
+        <div class="button-group">
+            <button data-download-pdf="test-keyboard" aria-label="Prueba de navegación por teclado">
+                Navega con Tab
+            </button>
+            <button data-download-pdf="test-focus" aria-label="Prueba de estado focus">
+                Presiona Enter
+            </button>
+        </div>
+        <div class="test-info">
+            <strong>Prueba:</strong> Navegación por teclado:
+            <ul style="margin: 8px 0 0 20px;">
+                <li>Presiona <kbd>Tab</kbd> para navegar entre botones</li>
+                <li>Verifica que el estado focus sea visible (borde azul)</li>
+                <li>Presiona <kbd>Enter</kbd> o <kbd>Espacio</kbd> para activar</li>
+                <li>Verifica que las notificaciones sean anunciadas por lectores de pantalla</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test 4: Tracking de descargas -->
+    <div class="test-section">
+        <h2>4. Tracking de Descargas</h2>
+        <div class="button-group">
+            <button data-download-pdf="nice" aria-label="Descargar para tracking">
+                Descargar (con tracking)
+            </button>
+        </div>
+        <div class="test-info">
+            <strong>Prueba:</strong> Tracking de descargas:
+            <ol style="margin: 8px 0 0 20px;">
+                <li>Haz clic en el botón varias veces</li>
+                <li>Abre la consola del navegador (F12)</li>
+                <li>Escribe: <code>localStorage.getItem('sufed_download_stats')</code></li>
+                <li>Deberías ver un JSON con el contador de descargas</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Test 5: Responsive -->
+    <div class="test-section">
+        <h2>5. Diseño Responsive</h2>
+        <div class="test-info">
+            <strong>Prueba:</strong> Redimensiona la ventana del navegador:
+            <ul style="margin: 8px 0 0 20px;">
+                <li>En móvil: Las notificaciones ocupan todo el ancho</li>
+                <li>En desktop: Las notificaciones tienen ancho máximo de 320px</li>
+                <li>Los botones mantienen tamaño mínimo táctil (44x44px)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test 6: Tipos de notificaciones -->
+    <div class="test-section">
+        <h2>6. Tipos de Notificaciones</h2>
+        <div class="button-group">
+            <button onclick="testNotification('success')">Success</button>
+            <button onclick="testNotification('error')">Error</button>
+            <button onclick="testNotification('info')">Info</button>
+            <button onclick="testNotification('warning')">Warning</button>
+        </div>
+        <div class="test-info">
+            <strong>Prueba:</strong> Haz clic en cada botón para ver los diferentes tipos de notificaciones.
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Test function for notifications
+        function testNotification(type) {
+            const messages = {
+                success: 'Descarga completada exitosamente',
+                error: 'Error al descargar el archivo',
+                info: 'Este documento estará disponible próximamente',
+                warning: 'Advertencia: El archivo es muy grande'
+            };
+
+            const messageEl = document.createElement('div');
+            messageEl.className = `download-message download-message--${type}`;
+            messageEl.textContent = messages[type];
+            messageEl.setAttribute('role', 'status');
+            messageEl.setAttribute('aria-live', 'polite');
+
+            const bgColors = {
+                'success': '#4CAF50',
+                'error': '#f44336',
+                'info': '#2196F3',
+                'warning': '#FF9800'
+            };
+
+            Object.assign(messageEl.style, {
+                position: 'fixed',
+                bottom: '20px',
+                right: '20px',
+                padding: '16px 24px',
+                backgroundColor: bgColors[type],
+                color: 'white',
+                borderRadius: '8px',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                zIndex: '10000',
+                fontSize: '14px',
+                fontWeight: '500',
+                maxWidth: '300px',
+                animation: 'slideInUp 0.3s ease-out'
+            });
+
+            document.body.appendChild(messageEl);
+
+            setTimeout(() => {
+                messageEl.style.animation = 'slideOutDown 0.3s ease-out';
+                setTimeout(() => {
+                    if (document.body.contains(messageEl)) {
+                        document.body.removeChild(messageEl);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // Log initialization
+        console.log('%c✓ Test page loaded', 'color: #4CAF50; font-weight: bold; font-size: 14px;');
+        console.log('%cPara ver las estadísticas de descarga, ejecuta:', 'color: #2196F3; font-size: 12px;');
+        console.log('%cJSON.parse(localStorage.getItem("sufed_download_stats"))', 'background: #f5f5f5; padding: 4px 8px; border-radius: 4px; font-family: monospace;');
+    </script>
+</body>
+</html>

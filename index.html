@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Educación, evidencia y práctica clínica para avanzar en el manejo del dolor en Uruguay. Guías, recursos y formación para profesionales de la salud.">
+    <title>SUFED - Sociedad Uruguaya de Fisioterapia Especializada en Dolor</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Navegación principal">
+        <div class="navbar__container container">
+            <a href="/" class="navbar__logo" aria-label="SUFED - Inicio">
+                <span class="navbar__logo-text">SUFED</span>
+            </a>
+
+            <button class="navbar__toggle" aria-label="Abrir menú de navegación" aria-expanded="false"
+                aria-controls="navbar-menu">
+                <span class="navbar__hamburger"></span>
+            </button>
+
+            <ul class="navbar__menu" id="navbar-menu">
+                <li class="navbar__item">
+                    <a href="#inicio" class="navbar__link navbar__link--active">Inicio</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#sobre-nosotros" class="navbar__link">Sobre Nosotros</a>
+                </li>
+                <li class="navbar__item navbar__item--dropdown">
+                    <button class="navbar__link navbar__dropdown-toggle" aria-expanded="false"
+                        aria-controls="educacion-submenu">
+                        Educación
+                        <svg class="navbar__dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <ul class="navbar__submenu" id="educacion-submenu">
+                        <li class="navbar__submenu-item">
+                            <a href="#guias" class="navbar__submenu-link">Guías</a>
+                        </li>
+                        <li class="navbar__submenu-item">
+                            <a href="#interpretacion" class="navbar__submenu-link">Interpretación</a>
+                        </li>
+                        <li class="navbar__submenu-item">
+                            <a href="#articulos" class="navbar__submenu-link">Artículos</a>
+                        </li>
+                        <li class="navbar__submenu-item">
+                            <a href="#conceptos" class="navbar__submenu-link">Conceptos clave</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navbar__item">
+                    <a href="#recursos" class="navbar__link">Recursos</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#competencias" class="navbar__link">Competencias</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#actividades" class="navbar__link">Actividades</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#contacto" class="navbar__link">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">SUFED – Sociedad Uruguaya de Fisioterapia Especializada en Dolor</h1>
+                    <p class="hero__subtitle">Educación, evidencia y práctica clínica para avanzar en el manejo del
+                        dolor en Uruguay</p>
+
+                    <div class="hero__cta-group">
+                        <a href="#guias" class="hero__cta-button hero__cta-button--primary">
+                            <svg class="hero__cta-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Guías Prácticas</span>
+                        </a>
+                        <a href="#educacion" class="hero__cta-button hero__cta-button--secondary">
+                            <svg class="hero__cta-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Educación</span>
+                        </a>
+                        <a href="#recursos" class="hero__cta-button hero__cta-button--secondary">
+                            <svg class="hero__cta-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Recursos</span>
+                        </a>
+                        <a href="#contacto" class="hero__cta-button hero__cta-button--secondary">
+                            <svg class="hero__cta-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Contacto</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero__image-wrapper">
+                    <img src="assets/images/sufed.jpg"
+                        alt="Equipo interdisciplinario de SUFED trabajando en el manejo del dolor" class="hero__image"
+                        loading="lazy" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- ¿Qué es SUFED? Section -->
+        <section class="about-intro">
+            <div class="about-intro__container container">
+                <div class="about-intro__icon-wrapper">
+                    <svg class="about-intro__icon" width="80" height="80" viewBox="0 0 80 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="40" cy="40" r="38" stroke="#2196F3" stroke-width="3" fill="#E3F2FD" />
+                        <path d="M40 20v20m0 0v20m0-20h20m-20 0H20" stroke="#1976D2" stroke-width="4"
+                            stroke-linecap="round" />
+                        <circle cx="40" cy="40" r="6" fill="#009688" />
+                    </svg>
+                </div>
+
+                <div class="about-intro__content">
+                    <h2 class="about-intro__title">¿Qué es SUFED?</h2>
+                    <p class="about-intro__text">
+                        SUFED es un Grupo de Interés Especial (SIG) dentro de AFU dedicado a promover una fisioterapia
+                        basada en evidencia y enfocada en el abordaje contemporáneo del dolor.
+                    </p>
+                    <div class="about-intro__features">
+                        <div class="about-intro__feature">
+                            <svg class="about-intro__feature-icon" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#009688"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Evidencia científica actualizada</span>
+                        </div>
+                        <div class="about-intro__feature">
+                            <svg class="about-intro__feature-icon" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#009688"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Enfoque centrado en la persona</span>
+                        </div>
+                        <div class="about-intro__feature">
+                            <svg class="about-intro__feature-icon" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#009688"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Abordaje interdisciplinario</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Últimas Novedades Section -->
+        <section class="news">
+            <div class="news__container container">
+                <div class="news__header">
+                    <h2 class="news__title">Últimas Novedades</h2>
+                    <p class="news__subtitle">Mantente informado sobre nuestras actividades, publicaciones y eventos</p>
+                </div>
+
+                <div class="news__grid">
+                    <!-- News Card 1 -->
+                    <article class="news-card">
+                        <div class="news-card__image-wrapper">
+                            <img src="assets/images/news-placeholder-1.svg" alt="Webinar sobre manejo del dolor crónico"
+                                class="news-card__image" loading="lazy" width="400" height="250">
+                            <span class="news-card__badge news-card__badge--webinar">Webinar</span>
+                        </div>
+                        <div class="news-card__content">
+                            <time class="news-card__date" datetime="2025-11-15">15 de Noviembre, 2025</time>
+                            <h3 class="news-card__title">Webinar: Abordaje Biopsicosocial del Dolor Crónico</h3>
+                            <p class="news-card__excerpt">
+                                Únete a nuestro próximo webinar donde exploraremos las últimas evidencias en el manejo
+                                del dolor desde una perspectiva integral.
+                            </p>
+                            <a href="#actividades" class="news-card__link">
+                                Leer más
+                                <svg class="news-card__link-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- News Card 2 -->
+                    <article class="news-card">
+                        <div class="news-card__image-wrapper">
+                            <img src="assets/images/news-placeholder-2.svg" alt="Nueva guía NICE sobre dolor lumbar"
+                                class="news-card__image" loading="lazy" width="400" height="250">
+                            <span class="news-card__badge news-card__badge--publication">Publicación</span>
+                        </div>
+                        <div class="news-card__content">
+                            <time class="news-card__date" datetime="2025-11-08">8 de Noviembre, 2025</time>
+                            <h3 class="news-card__title">Actualización de Guías NICE para Dolor Lumbar</h3>
+                            <p class="news-card__excerpt">
+                                Descubre las nuevas recomendaciones de NICE para el manejo del dolor lumbar y su
+                                aplicación en la práctica clínica.
+                            </p>
+                            <a href="#guias" class="news-card__link">
+                                Leer más
+                                <svg class="news-card__link-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- News Card 3 -->
+                    <article class="news-card">
+                        <div class="news-card__image-wrapper">
+                            <img src="assets/images/news-placeholder-3.svg" alt="Reunión mensual de SUFED"
+                                class="news-card__image" loading="lazy" width="400" height="250">
+                            <span class="news-card__badge news-card__badge--event">Evento</span>
+                        </div>
+                        <div class="news-card__content">
+                            <time class="news-card__date" datetime="2025-11-01">1 de Noviembre, 2025</time>
+                            <h3 class="news-card__title">Reunión Mensual: Casos Clínicos Complejos</h3>
+                            <p class="news-card__excerpt">
+                                Participa en nuestra reunión mensual donde discutiremos casos clínicos desafiantes y
+                                compartiremos experiencias.
+                            </p>
+                            <a href="#actividades" class="news-card__link">
+                                Leer más
+                                <svg class="news-card__link-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="news__footer">
+                    <a href="#actividades" class="news__view-all">
+                        Ver todas las novedades
+                        <svg class="news__view-all-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M7.5 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Nosotros Section -->
+        <section id="sobre-nosotros" class="about">
+            <div class="about__container container">
+                <!-- Header -->
+                <div class="about__header">
+                    <h2 class="about__title">Sobre Nosotros</h2>
+                    <p class="about__lead">
+                        SUFED es un Grupo de Interés Especial (SIG) dentro de la Asociación de Fisioterapeutas del
+                        Uruguay (AFU),
+                        dedicado a promover una fisioterapia basada en evidencia y enfocada en el abordaje contemporáneo
+                        del dolor.
+                    </p>
+                </div>
+
+                <!-- Descripción Institucional -->
+                <div class="about__description">
+                    <div class="about__description-content">
+                        <h3 class="about__section-title">¿Quiénes Somos?</h3>
+                        <p class="about__text">
+                            Como Grupo de Interés Especial de AFU, SUFED reúne a profesionales de la fisioterapia
+                            comprometidos
+                            con la excelencia en el manejo del dolor. Trabajamos para actualizar conocimientos,
+                            compartir experiencias
+                            y promover prácticas clínicas basadas en la mejor evidencia científica disponible.
+                        </p>
+                        <p class="about__text">
+                            Nuestro enfoque se centra en el modelo biopsicosocial del dolor, reconociendo la complejidad
+                            de esta
+                            experiencia y la necesidad de un abordaje integral, interdisciplinario y centrado en la
+                            persona.
+                        </p>
+                    </div>
+                    <div class="about__description-image">
+                        <svg class="about__illustration" width="300" height="300" viewBox="0 0 300 300" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="150" cy="150" r="140" fill="#E3F2FD" />
+                            <circle cx="150" cy="150" r="100" fill="#2196F3" opacity="0.1" />
+                            <circle cx="150" cy="150" r="60" fill="#009688" opacity="0.2" />
+                            <path d="M150 50v200M50 150h200" stroke="#1976D2" stroke-width="3" stroke-linecap="round" />
+                            <circle cx="150" cy="150" r="15" fill="#009688" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Propósito, Misión y Visión -->
+                <div class="about__mission-vision">
+                    <!-- Propósito -->
+                    <div class="about__card about__card--purpose">
+                        <div class="about__card-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="24" cy="24" r="22" stroke="#2196F3" stroke-width="3" />
+                                <path d="M24 12v12l8 8" stroke="#009688" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="about__card-title">Propósito</h3>
+                        <p class="about__card-text">
+                            Ser un espacio de referencia técnica y académica en Uruguay para el abordaje del dolor desde
+                            la fisioterapia,
+                            promoviendo la actualización continua, el intercambio de conocimientos y la mejora de la
+                            práctica clínica
+                            basada en evidencia científica actualizada.
+                        </p>
+                    </div>
+
+                    <!-- Misión -->
+                    <div class="about__card about__card--mission">
+                        <div class="about__card-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M24 4L6 14v12c0 11 7.5 21.3 18 24 10.5-2.7 18-13 18-24V14L24 4z"
+                                    stroke="#2196F3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M18 24l4 4 8-8" stroke="#009688" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="about__card-title">Misión</h3>
+                        <p class="about__card-text">
+                            Educar, difundir y aplicar conocimientos actualizados sobre el dolor, facilitando el acceso
+                            a guías de práctica
+                            clínica, recursos validados y material educativo. Fomentar el desarrollo de competencias
+                            profesionales en el
+                            manejo del dolor y promover la colaboración interdisciplinaria para mejorar la calidad de
+                            atención a las
+                            personas con dolor en Uruguay.
+                        </p>
+                    </div>
+
+                    <!-- Visión -->
+                    <div class="about__card about__card--vision">
+                        <div class="about__card-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="24" cy="20" r="6" stroke="#2196F3" stroke-width="3" />
+                                <path d="M8 20c0-8 7.2-14 16-14s16 6 16 14c0 8-7.2 14-16 14S8 28 8 20z" stroke="#2196F3"
+                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 38c4-2 8-3 12-3s8 1 12 3" stroke="#009688" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="about__card-title">Visión</h3>
+                        <p class="about__card-text">
+                            Consolidarnos como el referente nacional en fisioterapia especializada en dolor, reconocidos
+                            por nuestra
+                            contribución a la formación profesional, la difusión de evidencia científica y la promoción
+                            de prácticas
+                            clínicas éticas, actualizadas y centradas en la persona.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valores -->
+                <div class="about__values">
+                    <h3 class="about__section-title about__section-title--centered">Nuestros Valores</h3>
+                    <p class="about__values-intro">
+                        Los valores que guían nuestro trabajo y definen nuestra identidad como organización profesional:
+                    </p>
+
+                    <div class="about__values-grid">
+                        <div class="about__value-item">
+                            <div class="about__value-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M16 4v24M4 16h24" stroke="#009688" stroke-width="2.5"
+                                        stroke-linecap="round" />
+                                    <circle cx="16" cy="16" r="3" fill="#009688" />
+                                </svg>
+                            </div>
+                            <h4 class="about__value-title">Evidencia Científica Actualizada</h4>
+                            <p class="about__value-text">
+                                Basamos nuestras recomendaciones y prácticas en la mejor evidencia científica
+                                disponible,
+                                manteniéndonos actualizados con las investigaciones más recientes.
+                            </p>
+                        </div>
+
+                        <div class="about__value-item">
+                            <div class="about__value-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <circle cx="16" cy="12" r="4" stroke="#009688" stroke-width="2.5" />
+                                    <path d="M8 26c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#009688" stroke-width="2.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <h4 class="about__value-title">Enfoque Centrado en la Persona</h4>
+                            <p class="about__value-text">
+                                Reconocemos la singularidad de cada persona y su experiencia de dolor, promoviendo un
+                                abordaje individualizado, respetuoso y empático.
+                            </p>
+                        </div>
+
+                        <div class="about__value-item">
+                            <div class="about__value-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M16 4L4 10v8c0 7.3 5 14.2 12 16 7-1.8 12-8.7 12-16v-8L16 4z"
+                                        stroke="#009688" stroke-width="2.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h4 class="about__value-title">Ética y Lenguaje Responsable</h4>
+                            <p class="about__value-text">
+                                Utilizamos un lenguaje técnico, preciso y responsable, evitando términos que puedan
+                                generar miedo o malentendidos sobre el dolor.
+                            </p>
+                        </div>
+
+                        <div class="about__value-item">
+                            <div class="about__value-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <circle cx="10" cy="10" r="3" stroke="#009688" stroke-width="2.5" />
+                                    <circle cx="22" cy="10" r="3" stroke="#009688" stroke-width="2.5" />
+                                    <circle cx="10" cy="22" r="3" stroke="#009688" stroke-width="2.5" />
+                                    <circle cx="22" cy="22" r="3" stroke="#009688" stroke-width="2.5" />
+                                    <path d="M13 10h6M13 22h6M10 13v6M22 13v6" stroke="#009688" stroke-width="2.5" />
+                                </svg>
+                            </div>
+                            <h4 class="about__value-title">Interdisciplinariedad</h4>
+                            <p class="about__value-text">
+                                Valoramos y promovemos el trabajo colaborativo con otros profesionales de la salud,
+                                reconociendo que el abordaje del dolor requiere múltiples perspectivas.
+                            </p>
+                        </div>
+
+                        <div class="about__value-item">
+                            <div class="about__value-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M16 28c6.6 0 12-5.4 12-12S22.6 4 16 4 4 9.4 4 16s5.4 12 12 12z"
+                                        stroke="#009688" stroke-width="2.5" />
+                                    <path d="M16 10v6l4 4" stroke="#009688" stroke-width="2.5" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <h4 class="about__value-title">Accesibilidad y Claridad Comunicativa</h4>
+                            <p class="about__value-text">
+                                Nos esforzamos por hacer accesible el conocimiento científico, comunicando de forma
+                                clara tanto a profesionales como al público general.
+                            </p>
+                        </div>
+
+                        <div class="about__value-item">
+                            <div class="about__value-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M4 16l4 4 8-8 12 12" stroke="#009688" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M28 8v12" stroke="#009688" stroke-width="2.5" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <h4 class="about__value-title">Actualización Continua</h4>
+                            <p class="about__value-text">
+                                Fomentamos el aprendizaje permanente y la formación continua como pilares fundamentales
+                                del desarrollo profesional en el campo del dolor.
+                            </p>
+                        </div>
+
+                        <div class="about__value-item">
+                            <div class="about__value-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <circle cx="16" cy="16" r="12" stroke="#009688" stroke-width="2.5" />
+                                    <path d="M12 16l3 3 5-6" stroke="#009688" stroke-width="2.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h4 class="about__value-title">Colaboración con la Comunidad Profesional</h4>
+                            <p class="about__value-text">
+                                Promovemos el intercambio de experiencias, la discusión de casos clínicos y la
+                                construcción colectiva de conocimiento entre profesionales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Autoridades y Equipo -->
+                <div class="about__team">
+                    <h3 class="about__section-title about__section-title--centered">Autoridades y Equipo</h3>
+                    <p class="about__team-intro">
+                        Nuestro equipo está conformado por profesionales comprometidos con la excelencia en el manejo
+                        del dolor
+                        y la formación continua en fisioterapia.
+                    </p>
+
+                    <div class="about__team-grid">
+                        <!-- Presidenta -->
+                        <article class="team-card">
+                            <div class="team-card__image-wrapper">
+                                <div class="team-card__image-placeholder">
+                                    <svg class="team-card__placeholder-icon" width="80" height="80" viewBox="0 0 80 80"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <circle cx="40" cy="28" r="12" stroke="#2196F3" stroke-width="3" />
+                                        <path d="M16 68c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="#2196F3"
+                                            stroke-width="3" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="team-card__content">
+                                <h4 class="team-card__name">Noemí Fremd</h4>
+                                <p class="team-card__role">Presidenta</p>
+                                <p class="team-card__bio">
+                                    Lidera SUFED con compromiso en la promoción de prácticas basadas en evidencia
+                                    y el desarrollo profesional en el manejo del dolor.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Secretario -->
+                        <article class="team-card">
+                            <div class="team-card__image-wrapper">
+                                <div class="team-card__image-placeholder">
+                                    <svg class="team-card__placeholder-icon" width="80" height="80" viewBox="0 0 80 80"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <circle cx="40" cy="28" r="12" stroke="#009688" stroke-width="3" />
+                                        <path d="M16 68c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="#009688"
+                                            stroke-width="3" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="team-card__content">
+                                <h4 class="team-card__name">Ernesto Benítez</h4>
+                                <p class="team-card__role">Secretario</p>
+                                <p class="team-card__bio">
+                                    Coordina las actividades administrativas y de comunicación de SUFED,
+                                    facilitando el intercambio de conocimientos entre profesionales.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Prosecretario -->
+                        <article class="team-card">
+                            <div class="team-card__image-wrapper">
+                                <div class="team-card__image-placeholder">
+                                    <svg class="team-card__placeholder-icon" width="80" height="80" viewBox="0 0 80 80"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <circle cx="40" cy="28" r="12" stroke="#1976D2" stroke-width="3" />
+                                        <path d="M16 68c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="#1976D2"
+                                            stroke-width="3" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="team-card__content">
+                                <h4 class="team-card__name">Agustín Matonte</h4>
+                                <p class="team-card__role">Prosecretario</p>
+                                <p class="team-card__bio">
+                                    Apoya la gestión organizativa y contribuye al desarrollo de iniciativas
+                                    educativas y de difusión científica.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Relación con AFU -->
+                <div class="about__afu-relation">
+                    <div class="about__afu-content">
+                        <h3 class="about__section-title">Nuestra Relación con AFU</h3>
+                        <p class="about__text">
+                            SUFED forma parte de la Asociación de Fisioterapeutas del Uruguay (AFU), la organización que
+                            representa y nuclea a los profesionales de la fisioterapia en nuestro país. Como Grupo de
+                            Interés
+                            Especial, mantenemos una estrecha colaboración con AFU, compartiendo sus valores
+                            institucionales
+                            y contribuyendo al desarrollo de la profesión en Uruguay.
+                        </p>
+                        <p class="about__text">
+                            Esta vinculación nos permite trabajar en red con otros profesionales, participar en
+                            iniciativas
+                            de formación continua y contribuir al posicionamiento de la fisioterapia uruguaya a nivel
+                            nacional
+                            e internacional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educación Section -->
+        <section id="educacion" class="education">
+            <div class="education__container container">
+                <!-- Header -->
+                <div class="education__header">
+                    <h2 class="education__title">Educación</h2>
+                    <p class="education__subtitle">
+                        Accede a guías de práctica clínica, interpretaciones, conceptos esenciales y material educativo
+                        sobre el manejo del dolor basado en evidencia científica actualizada.
+                    </p>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="education__tabs" role="tablist" aria-label="Categorías de educación">
+                    <button class="education__tab education__tab--active" role="tab" aria-selected="true"
+                        aria-controls="tab-guias" id="tab-button-guias" data-tab="guias">
+                        <svg class="education__tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Guías</span>
+                    </button>
+
+                    <button class="education__tab" role="tab" aria-selected="false" aria-controls="tab-interpretacion"
+                        id="tab-button-interpretacion" data-tab="interpretacion">
+                        <svg class="education__tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Interpretación</span>
+                    </button>
+
+                    <button class="education__tab" role="tab" aria-selected="false" aria-controls="tab-conceptos"
+                        id="tab-button-conceptos" data-tab="conceptos">
+                        <svg class="education__tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Conceptos</span>
+                    </button>
+
+                    <button class="education__tab" role="tab" aria-selected="false" aria-controls="tab-material"
+                        id="tab-button-material" data-tab="material">
+                        <svg class="education__tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Material Educativo</span>
+                    </button>
+                </div>
+
+                <!-- Tab Panels -->
+                <div class="education__panels">
+                    <!-- Guías Panel -->
+                    <div class="education__panel education__panel--active" role="tabpanel" id="tab-guias"
+                        aria-labelledby="tab-button-guias" data-panel="guias">
+                        <div class="education__content">
+                            <h3 class="education__content-title">Guías de Práctica Clínica</h3>
+                            <p class="education__content-text">
+                                Las guías de práctica clínica son documentos fundamentales que sintetizan la mejor
+                                evidencia
+                                disponible para orientar la toma de decisiones clínicas. Aquí encontrarás las
+                                principales
+                                guías internacionales sobre el manejo del dolor.
+                            </p>
+
+                            <!-- Guidelines List -->
+                            <div class="guidelines">
+                                <!-- NICE Guideline -->
+                                <article class="guideline-card">
+                                    <div class="guideline-card__header">
+                                        <div class="guideline-card__icon">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="40" height="40" rx="8" fill="#E3F2FD" />
+                                                <path d="M13 20h14M13 15h14M13 25h10" stroke="#2196F3" stroke-width="2"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="guideline-card__title-group">
+                                            <h4 class="guideline-card__title">NICE Guidelines</h4>
+                                            <p class="guideline-card__organization">National Institute for Health and
+                                                Care Excellence</p>
+                                        </div>
+                                    </div>
+                                    <p class="guideline-card__description">
+                                        Guías del Reino Unido sobre dolor crónico primario, dolor lumbar, dolor
+                                        neuropático
+                                        y otros tipos de dolor. Reconocidas internacionalmente por su rigor metodológico
+                                        y
+                                        recomendaciones basadas en evidencia de alta calidad.
+                                    </p>
+                                    <div class="guideline-card__topics">
+                                        <span class="guideline-card__topic">Dolor Crónico Primario</span>
+                                        <span class="guideline-card__topic">Dolor Lumbar</span>
+                                        <span class="guideline-card__topic">Dolor Neuropático</span>
+                                    </div>
+                                    <div class="guideline-card__actions">
+                                        <a href="https://www.nice.org.uk/guidance/conditions-and-diseases/injuries-accidents-and-wounds/pain"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="guideline-card__link guideline-card__link--external">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M12 8.667V12.667C12 13.403 11.403 14 10.667 14H3.333C2.597 14 2 13.403 2 12.667V5.333C2 4.597 2.597 4 3.333 4H7.333"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M10 2H14V6" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Ver guías originales
+                                        </a>
+                                        <button class="guideline-card__link guideline-card__link--download"
+                                            data-download-pdf="nice" data-guide="nice" aria-label="Descargar interpretación SUFED de guías NICE">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M14 10v2.667C14 13.403 13.403 14 12.667 14H3.333C2.597 14 2 13.403 2 12.667V10"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M4.667 6.667L8 10l3.333-3.333" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Descargar PDF
+                                        </button>
+                                    </div>
+                                </article>
+
+                                <!-- JOSPT Guideline -->
+                                <article class="guideline-card">
+                                    <div class="guideline-card__header">
+                                        <div class="guideline-card__icon">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="40" height="40" rx="8" fill="#E0F2F1" />
+                                                <path d="M13 20h14M13 15h14M13 25h10" stroke="#009688" stroke-width="2"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="guideline-card__title-group">
+                                            <h4 class="guideline-card__title">JOSPT Clinical Practice Guidelines</h4>
+                                            <p class="guideline-card__organization">Journal of Orthopaedic & Sports
+                                                Physical Therapy</p>
+                                        </div>
+                                    </div>
+                                    <p class="guideline-card__description">
+                                        Guías de práctica clínica específicas para fisioterapia, desarrolladas por
+                                        expertos
+                                        internacionales. Incluyen recomendaciones detalladas sobre evaluación,
+                                        diagnóstico
+                                        y tratamiento de diversas condiciones musculoesqueléticas.
+                                    </p>
+                                    <div class="guideline-card__topics">
+                                        <span class="guideline-card__topic">Dolor Lumbar</span>
+                                        <span class="guideline-card__topic">Dolor Cervical</span>
+                                        <span class="guideline-card__topic">Dolor de Hombro</span>
+                                        <span class="guideline-card__topic">Dolor de Rodilla</span>
+                                    </div>
+                                    <div class="guideline-card__actions">
+                                        <a href="https://www.jospt.org/action/showPublications?pubType=journal&pageSize=100&startPage=0&category=10.2519%2Fjospt.2024.cpg"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="guideline-card__link guideline-card__link--external">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M12 8.667V12.667C12 13.403 11.403 14 10.667 14H3.333C2.597 14 2 13.403 2 12.667V5.333C2 4.597 2.597 4 3.333 4H7.333"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M10 2H14V6" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Ver guías originales
+                                        </a>
+                                        <button class="guideline-card__link guideline-card__link--download"
+                                            data-download-pdf="jospt" data-guide="jospt"
+                                            aria-label="Descargar interpretación SUFED de guías JOSPT">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M14 10v2.667C14 13.403 13.403 14 12.667 14H3.333C2.597 14 2 13.403 2 12.667V10"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M4.667 6.667L8 10l3.333-3.333" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Descargar PDF
+                                        </button>
+                                    </div>
+                                </article>
+
+                                <!-- IASP Guideline -->
+                                <article class="guideline-card">
+                                    <div class="guideline-card__header">
+                                        <div class="guideline-card__icon">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="40" height="40" rx="8" fill="#FFF3E0" />
+                                                <path d="M13 20h14M13 15h14M13 25h10" stroke="#FF9800" stroke-width="2"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="guideline-card__title-group">
+                                            <h4 class="guideline-card__title">IASP Guidelines</h4>
+                                            <p class="guideline-card__organization">International Association for the
+                                                Study of Pain</p>
+                                        </div>
+                                    </div>
+                                    <p class="guideline-card__description">
+                                        Recursos y guías de la asociación internacional líder en el estudio del dolor.
+                                        Incluye la definición actualizada de dolor (2020), clasificación del dolor
+                                        crónico
+                                        y recomendaciones para el manejo de diferentes tipos de dolor.
+                                    </p>
+                                    <div class="guideline-card__topics">
+                                        <span class="guideline-card__topic">Definición de Dolor</span>
+                                        <span class="guideline-card__topic">Clasificación ICD-11</span>
+                                        <span class="guideline-card__topic">Dolor Neuropático</span>
+                                    </div>
+                                    <div class="guideline-card__actions">
+                                        <a href="https://www.iasp-pain.org/resources/guidelines/" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="guideline-card__link guideline-card__link--external">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M12 8.667V12.667C12 13.403 11.403 14 10.667 14H3.333C2.597 14 2 13.403 2 12.667V5.333C2 4.597 2.597 4 3.333 4H7.333"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M10 2H14V6" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Ver guías originales
+                                        </a>
+                                        <button class="guideline-card__link guideline-card__link--download"
+                                            data-download-pdf="iasp" data-guide="iasp" aria-label="Descargar interpretación SUFED de guías IASP">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M14 10v2.667C14 13.403 13.403 14 12.667 14H3.333C2.597 14 2 13.403 2 12.667V10"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M4.667 6.667L8 10l3.333-3.333" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Descargar PDF
+                                        </button>
+                                    </div>
+                                </article>
+
+                                <!-- The Lancet Series -->
+                                <article class="guideline-card">
+                                    <div class="guideline-card__header">
+                                        <div class="guideline-card__icon">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="40" height="40" rx="8" fill="#F3E5F5" />
+                                                <path d="M13 20h14M13 15h14M13 25h10" stroke="#9C27B0" stroke-width="2"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="guideline-card__title-group">
+                                            <h4 class="guideline-card__title">The Lancet Series on Low Back Pain</h4>
+                                            <p class="guideline-card__organization">The Lancet</p>
+                                        </div>
+                                    </div>
+                                    <p class="guideline-card__description">
+                                        Serie de artículos de alto impacto sobre dolor lumbar publicados en The Lancet.
+                                        Analiza la epidemiología global, los factores de riesgo, el manejo basado en
+                                        evidencia
+                                        y los desafíos en la atención del dolor lumbar.
+                                    </p>
+                                    <div class="guideline-card__topics">
+                                        <span class="guideline-card__topic">Dolor Lumbar</span>
+                                        <span class="guideline-card__topic">Epidemiología</span>
+                                        <span class="guideline-card__topic">Manejo Basado en Evidencia</span>
+                                    </div>
+                                    <div class="guideline-card__actions">
+                                        <a href="https://www.thelancet.com/series/low-back-pain" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="guideline-card__link guideline-card__link--external">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M12 8.667V12.667C12 13.403 11.403 14 10.667 14H3.333C2.597 14 2 13.403 2 12.667V5.333C2 4.597 2.597 4 3.333 4H7.333"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M10 2H14V6" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Ver serie original
+                                        </a>
+                                        <button class="guideline-card__link guideline-card__link--download"
+                                            data-download-pdf="lancet" data-guide="lancet"
+                                            aria-label="Descargar interpretación SUFED de The Lancet Series">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M14 10v2.667C14 13.403 13.403 14 12.667 14H3.333C2.597 14 2 13.403 2 12.667V10"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M4.667 6.667L8 10l3.333-3.333" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Descargar PDF
+                                        </button>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Info Box -->
+                            <div class="education__info-box">
+                                <svg class="education__info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10" stroke="#2196F3" stroke-width="2" />
+                                    <path d="M12 16v-4M12 8h.01" stroke="#2196F3" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p class="education__info-text">
+                                    <strong>Nota:</strong> Los PDFs descargables contienen interpretaciones y resúmenes
+                                    elaborados por SUFED para facilitar la comprensión y aplicación de estas guías en el
+                                    contexto uruguayo. Para acceder a las guías completas y originales, utiliza los
+                                    enlaces externos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interpretación Panel -->
+                    <div class="education__panel" role="tabpanel" id="tab-interpretacion"
+                        aria-labelledby="tab-button-interpretacion" data-panel="interpretacion" hidden>
+                        <div class="education__content">
+                            <h3 class="education__content-title">Interpretación de Guías</h3>
+                            <p class="education__content-text">
+                                Nuestro objetivo es ofrecer materiales que faciliten la comprensión y aplicación de las
+                                guías clínicas, permitiendo un abordaje del dolor basado en evidencia y útil en diversos
+                                contextos.
+                            </p>
+
+                            <!-- Interpretation Materials Grid -->
+                            <div class="interpretation">
+                                <!-- Interpretation Card 1 -->
+                                <article class="interpretation-card">
+                                    <div class="interpretation-card__header">
+                                        <div class="interpretation-card__icon">
+                                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="48" height="48" rx="12" fill="#E3F2FD" />
+                                                <path d="M24 16v16m-8-8h16" stroke="#2196F3" stroke-width="3"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <circle cx="24" cy="24" r="3" fill="#009688" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="interpretation-card__title">Cómo Leer una Guía Clínica</h4>
+                                    </div>
+                                    <p class="interpretation-card__description">
+                                        Material educativo que explica la estructura de las guías de práctica clínica,
+                                        cómo interpretar los niveles de evidencia y recomendaciones, y cómo aplicar
+                                        estas herramientas en la práctica diaria.
+                                    </p>
+                                    <div class="interpretation-card__meta">
+                                        <span class="interpretation-card__type">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M4 6h8M4 10h8M10 14H6a2 2 0 01-2-2V4a2 2 0 012-2h4l4 4v8a2 2 0 01-2 2z"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            Documento PDF
+                                        </span>
+                                        <span class="interpretation-card__duration">15 min lectura</span>
+                                    </div>
+                                    <button class="interpretation-card__button" data-resource="como-leer-guia"
+                                        aria-label="Descargar guía sobre cómo leer una guía clínica">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M17 12v3.333C17 16.253 16.253 17 15.333 17H4.667C3.747 17 3 16.253 3 15.333V12"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M10 12V3" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Descargar Material
+                                    </button>
+                                </article>
+
+                                <!-- Interpretation Card 2 - Video -->
+                                <article class="interpretation-card">
+                                    <div class="interpretation-card__header">
+                                        <div class="interpretation-card__icon interpretation-card__icon--video">
+                                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="48" height="48" rx="12" fill="#E0F2F1" />
+                                                <path d="M20 16l12 8-12 8V16z" fill="#009688" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="interpretation-card__title">Introducción a las Guías NICE</h4>
+                                    </div>
+                                    <p class="interpretation-card__description">
+                                        Video explicativo sobre las guías NICE para el manejo del dolor crónico
+                                        primario.
+                                        Análisis de las principales recomendaciones y su aplicación en fisioterapia.
+                                    </p>
+                                    <div class="interpretation-card__meta">
+                                        <span class="interpretation-card__type">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor"
+                                                    stroke-width="1.5" />
+                                                <path d="M6 7l4 2-4 2V7z" fill="currentColor" />
+                                            </svg>
+                                            Video
+                                        </span>
+                                        <span class="interpretation-card__duration">25 min</span>
+                                    </div>
+                                    <button class="interpretation-card__button interpretation-card__button--video"
+                                        data-video="nice-intro"
+                                        data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                        aria-label="Ver video sobre guías NICE">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path d="M7 5l8 5-8 5V5z" fill="currentColor" />
+                                        </svg>
+                                        Ver Video
+                                    </button>
+                                </article>
+
+                                <!-- Interpretation Card 3 -->
+                                <article class="interpretation-card">
+                                    <div class="interpretation-card__header">
+                                        <div class="interpretation-card__icon">
+                                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="48" height="48" rx="12" fill="#FFF3E0" />
+                                                <path d="M16 24h16M16 18h16M16 30h12" stroke="#FF9800" stroke-width="3"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="interpretation-card__title">Resumen Ejecutivo: Guías JOSPT</h4>
+                                    </div>
+                                    <p class="interpretation-card__description">
+                                        Síntesis de las principales guías JOSPT para dolor musculoesquelético.
+                                        Incluye recomendaciones clave, niveles de evidencia y aplicaciones prácticas
+                                        para fisioterapeutas.
+                                    </p>
+                                    <div class="interpretation-card__meta">
+                                        <span class="interpretation-card__type">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M4 6h8M4 10h8M10 14H6a2 2 0 01-2-2V4a2 2 0 012-2h4l4 4v8a2 2 0 01-2 2z"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            Documento PDF
+                                        </span>
+                                        <span class="interpretation-card__duration">20 min lectura</span>
+                                    </div>
+                                    <button class="interpretation-card__button" data-resource="jospt-resumen"
+                                        aria-label="Descargar resumen de guías JOSPT">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M17 12v3.333C17 16.253 16.253 17 15.333 17H4.667C3.747 17 3 16.253 3 15.333V12"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M10 12V3" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Descargar Material
+                                    </button>
+                                </article>
+
+                                <!-- Interpretation Card 4 - Video -->
+                                <article class="interpretation-card">
+                                    <div class="interpretation-card__header">
+                                        <div class="interpretation-card__icon interpretation-card__icon--video">
+                                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="48" height="48" rx="12" fill="#F3E5F5" />
+                                                <path d="M20 16l12 8-12 8V16z" fill="#9C27B0" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="interpretation-card__title">Aplicando la Evidencia en la Práctica
+                                        </h4>
+                                    </div>
+                                    <p class="interpretation-card__description">
+                                        Webinar sobre cómo trasladar las recomendaciones de las guías clínicas a la
+                                        práctica diaria. Casos clínicos y ejemplos prácticos de aplicación.
+                                    </p>
+                                    <div class="interpretation-card__meta">
+                                        <span class="interpretation-card__type">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor"
+                                                    stroke-width="1.5" />
+                                                <path d="M6 7l4 2-4 2V7z" fill="currentColor" />
+                                            </svg>
+                                            Video
+                                        </span>
+                                        <span class="interpretation-card__duration">45 min</span>
+                                    </div>
+                                    <button class="interpretation-card__button interpretation-card__button--video"
+                                        data-video="aplicacion-practica"
+                                        data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                        aria-label="Ver webinar sobre aplicación práctica">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path d="M7 5l8 5-8 5V5z" fill="currentColor" />
+                                        </svg>
+                                        Ver Video
+                                    </button>
+                                </article>
+                            </div>
+
+                            <!-- Info Box -->
+                            <div class="education__info-box">
+                                <svg class="education__info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10" stroke="#2196F3" stroke-width="2" />
+                                    <path d="M12 16v-4M12 8h.01" stroke="#2196F3" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p class="education__info-text">
+                                    <strong>Nota:</strong> Los materiales de interpretación son elaborados por el equipo
+                                    de SUFED para facilitar la comprensión de las guías internacionales y su aplicación
+                                    en el contexto uruguayo. Estos recursos complementan, pero no reemplazan, la lectura
+                                    de las guías originales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conceptos Panel -->
+                    <div class="education__panel" role="tabpanel" id="tab-conceptos"
+                        aria-labelledby="tab-button-conceptos" data-panel="conceptos" hidden>
+                        <div class="education__content">
+                            <h3 class="education__content-title">Conceptos Esenciales sobre Dolor</h3>
+                            <p class="education__content-text">
+                                Comprender el dolor desde una perspectiva actualizada y basada en evidencia es
+                                fundamental
+                                para su abordaje efectivo. En esta sección exploramos conceptos clave que sustentan la
+                                práctica clínica contemporánea.
+                            </p>
+
+                            <!-- Conceptos Grid -->
+                            <div class="concepts">
+                                <!-- Concept Card 1: Definición IASP 2020 -->
+                                <article class="concept-card concept-card--featured">
+                                    <div class="concept-card__header">
+                                        <div class="concept-card__icon">
+                                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="48" height="48" rx="12" fill="#E3F2FD" />
+                                                <path d="M24 14v20M14 24h20" stroke="#2196F3" stroke-width="3"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <circle cx="24" cy="24" r="4" fill="#009688" />
+                                            </svg>
+                                        </div>
+                                        <span class="concept-card__badge">Actualizado 2020</span>
+                                    </div>
+                                    <h4 class="concept-card__title">Definición de Dolor IASP 2020</h4>
+                                    <div class="concept-card__definition">
+                                        <p class="concept-card__quote">
+                                            "Una experiencia sensorial y emocional desagradable asociada o similar a la
+                                            asociada con daño tisular real o potencial."
+                                        </p>
+                                        <cite class="concept-card__citation">— IASP, 2020</cite>
+                                    </div>
+                                    <div class="concept-card__content">
+                                        <h5 class="concept-card__subtitle">Notas clave de la definición:</h5>
+                                        <ul class="concept-card__list">
+                                            <li>El dolor es siempre una experiencia personal influenciada por factores
+                                                biológicos, psicológicos y sociales</li>
+                                            <li>El dolor y la nocicepción son fenómenos diferentes; el dolor no puede
+                                                inferirse únicamente de la actividad neuronal sensorial</li>
+                                            <li>Las personas aprenden el concepto de dolor a través de sus experiencias
+                                                de vida</li>
+                                            <li>El reporte de una persona sobre una experiencia como dolor debe ser
+                                                respetado</li>
+                                            <li>Aunque el dolor usualmente cumple un rol adaptativo, puede tener efectos
+                                                adversos en la función y el bienestar social y psicológico</li>
+                                            <li>La descripción verbal es solo una de varias conductas para expresar
+                                                dolor; la incapacidad de comunicarse no niega la posibilidad de que un
+                                                ser humano o animal experimente dolor</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <!-- Concept Card 2: Diferencias con 1979 -->
+                                <article class="concept-card">
+                                    <div class="concept-card__header">
+                                        <div class="concept-card__icon concept-card__icon--secondary">
+                                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="48" height="48" rx="12" fill="#E0F2F1" />
+                                                <path d="M16 24h16M24 16v16" stroke="#009688" stroke-width="3"
+                                                    stroke-linecap="round" />
+                                                <path d="M20 20l8 8M28 20l-8 8" stroke="#009688" stroke-width="2"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h4 class="concept-card__title">Evolución desde la Definición de 1979</h4>
+                                    <div class="concept-card__content">
+                                        <div class="concept-card__comparison">
+                                            <div class="concept-card__comparison-item">
+                                                <h5 class="concept-card__comparison-title">Definición 1979</h5>
+                                                <p class="concept-card__comparison-text">
+                                                    "Una experiencia sensorial y emocional desagradable asociada con
+                                                    daño tisular real o potencial, o descrita en términos de tal daño."
+                                                </p>
+                                            </div>
+                                            <div class="concept-card__comparison-arrow">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="#009688" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <div class="concept-card__comparison-item">
+                                                <h5 class="concept-card__comparison-title">Definición 2020</h5>
+                                                <p class="concept-card__comparison-text">
+                                                    "Una experiencia sensorial y emocional desagradable asociada o
+                                                    similar a la asociada con daño tisular real o potencial."
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <h5 class="concept-card__subtitle">Cambios principales:</h5>
+                                        <ul class="concept-card__list">
+                                            <li><strong>Eliminación de "descrita en términos de":</strong> Reconoce que
+                                                el dolor puede existir sin capacidad de descripción verbal</li>
+                                            <li><strong>Inclusión de "o similar a":</strong> Valida experiencias de
+                                                dolor sin daño tisular identificable</li>
+                                            <li><strong>Notas explicativas ampliadas:</strong> Mayor énfasis en aspectos
+                                                psicosociales y la experiencia subjetiva</li>
+                                            <li><strong>Reconocimiento explícito:</strong> El dolor es siempre personal
+                                                y debe ser respetado</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <!-- Concept Card 3: Modelo Biopsicosocial -->
+                                <article class="concept-card concept-card--highlight">
+                                    <div class="concept-card__header">
+                                        <div class="concept-card__icon concept-card__icon--tertiary">
+                                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="48" height="48" rx="12" fill="#FFF3E0" />
+                                                <circle cx="24" cy="16" r="4" stroke="#FF9800" stroke-width="2" />
+                                                <circle cx="16" cy="28" r="4" stroke="#FF9800" stroke-width="2" />
+                                                <circle cx="32" cy="28" r="4" stroke="#FF9800" stroke-width="2" />
+                                                <path d="M24 20v4M20 26l-2 2M28 26l2 2" stroke="#FF9800"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h4 class="concept-card__title">Enfoque Biopsicosocial del Dolor</h4>
+                                    <div class="concept-card__content">
+                                        <p class="concept-card__text">
+                                            El modelo biopsicosocial reconoce que el dolor es una experiencia compleja
+                                            influenciada por múltiples factores interrelacionados:
+                                        </p>
+                                        <div class="concept-card__dimensions">
+                                            <div class="concept-card__dimension">
+                                                <div class="concept-card__dimension-icon">
+                                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                        <path
+                                                            d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4z"
+                                                            stroke="#2196F3" stroke-width="2" />
+                                                        <path d="M16 10v6l4 4" stroke="#2196F3" stroke-width="2"
+                                                            stroke-linecap="round" />
+                                                    </svg>
+                                                </div>
+                                                <h5 class="concept-card__dimension-title">Factores Biológicos</h5>
+                                                <ul class="concept-card__dimension-list">
+                                                    <li>Procesos nociceptivos</li>
+                                                    <li>Sensibilización central y periférica</li>
+                                                    <li>Genética y epigenética</li>
+                                                    <li>Estado de salud general</li>
+                                                    <li>Sueño y nutrición</li>
+                                                </ul>
+                                            </div>
+                                            <div class="concept-card__dimension">
+                                                <div class="concept-card__dimension-icon">
+                                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                        <circle cx="16" cy="12" r="4" stroke="#009688"
+                                                            stroke-width="2" />
+                                                        <path d="M8 26c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#009688"
+                                                            stroke-width="2" stroke-linecap="round" />
+                                                    </svg>
+                                                </div>
+                                                <h5 class="concept-card__dimension-title">Factores Psicológicos</h5>
+                                                <ul class="concept-card__dimension-list">
+                                                    <li>Creencias sobre el dolor</li>
+                                                    <li>Expectativas y atención</li>
+                                                    <li>Emociones (miedo, ansiedad, depresión)</li>
+                                                    <li>Estrategias de afrontamiento</li>
+                                                    <li>Experiencias previas</li>
+                                                </ul>
+                                            </div>
+                                            <div class="concept-card__dimension">
+                                                <div class="concept-card__dimension-icon">
+                                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                        <circle cx="12" cy="12" r="3" stroke="#FF9800"
+                                                            stroke-width="2" />
+                                                        <circle cx="20" cy="12" r="3" stroke="#FF9800"
+                                                            stroke-width="2" />
+                                                        <circle cx="12" cy="20" r="3" stroke="#FF9800"
+                                                            stroke-width="2" />
+                                                        <circle cx="20" cy="20" r="3" stroke="#FF9800"
+                                                            stroke-width="2" />
+                                                    </svg>
+                                                </div>
+                                                <h5 class="concept-card__dimension-title">Factores Sociales</h5>
+                                                <ul class="concept-card__dimension-list">
+                                                    <li>Contexto laboral y económico</li>
+                                                    <li>Apoyo social y familiar</li>
+                                                    <li>Cultura y lenguaje</li>
+                                                    <li>Acceso a servicios de salud</li>
+                                                    <li>Estigma y validación social</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="concept-card__highlight-box">
+                                            <svg class="concept-card__highlight-icon" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                aria-hidden="true">
+                                                <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                                    stroke="#FF9800" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <p class="concept-card__highlight-text">
+                                                <strong>Implicancia clínica:</strong> Un abordaje efectivo del dolor
+                                                debe
+                                                considerar todos estos factores de manera integrada, no solo los
+                                                aspectos
+                                                biomédicos. Esto requiere evaluación comprehensiva, educación del
+                                                paciente
+                                                y estrategias de tratamiento multimodales.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <!-- Concept Card 4: Mitos sobre el Dolor -->
+                                <article class="concept-card concept-card--myths">
+                                    <div class="concept-card__header">
+                                        <div class="concept-card__icon concept-card__icon--warning">
+                                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="48" height="48" rx="12" fill="#FFEBEE" />
+                                                <path d="M24 18v8M24 30h.01" stroke="#F44336" stroke-width="3"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M24 8L8 36h32L24 8z" stroke="#F44336" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h4 class="concept-card__title">Mitos Habituales sobre el Dolor</h4>
+                                    <p class="concept-card__text">
+                                        Desmitificar creencias erróneas sobre el dolor es fundamental para un abordaje
+                                        efectivo y basado en evidencia.
+                                    </p>
+                                    <div class="concept-card__myths-list">
+                                        <div class="concept-card__myth-item">
+                                            <div class="concept-card__myth-header">
+                                                <svg class="concept-card__myth-icon concept-card__myth-icon--false"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="10" stroke="#F44336" stroke-width="2" />
+                                                    <path d="M15 9l-6 6M9 9l6 6" stroke="#F44336" stroke-width="2"
+                                                        stroke-linecap="round" />
+                                                </svg>
+                                                <h5 class="concept-card__myth-title">Mito: "El dolor siempre indica daño
+                                                    tisular"</h5>
+                                            </div>
+                                            <div class="concept-card__myth-content">
+                                                <svg class="concept-card__myth-icon concept-card__myth-icon--true"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="10" stroke="#4CAF50" stroke-width="2" />
+                                                    <path d="M9 12l2 2 4-4" stroke="#4CAF50" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                                <p class="concept-card__myth-reality">
+                                                    <strong>Realidad:</strong> El dolor es una experiencia compleja que
+                                                    puede
+                                                    existir sin daño tisular identificable. La sensibilización del
+                                                    sistema nervioso,
+                                                    factores psicológicos y contextuales pueden generar dolor real sin
+                                                    lesión estructural.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="concept-card__myth-item">
+                                            <div class="concept-card__myth-header">
+                                                <svg class="concept-card__myth-icon concept-card__myth-icon--false"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="10" stroke="#F44336" stroke-width="2" />
+                                                    <path d="M15 9l-6 6M9 9l6 6" stroke="#F44336" stroke-width="2"
+                                                        stroke-linecap="round" />
+                                                </svg>
+                                                <h5 class="concept-card__myth-title">Mito: "El reposo es la mejor
+                                                    solución para el dolor"</h5>
+                                            </div>
+                                            <div class="concept-card__myth-content">
+                                                <svg class="concept-card__myth-icon concept-card__myth-icon--true"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="10" stroke="#4CAF50" stroke-width="2" />
+                                                    <path d="M9 12l2 2 4-4" stroke="#4CAF50" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                                <p class="concept-card__myth-reality">
+                                                    <strong>Realidad:</strong> El movimiento y la actividad graduada son
+                                                    fundamentales
+                                                    para la recuperación. El reposo prolongado puede aumentar la
+                                                    sensibilidad al dolor,
+                                                    reducir la capacidad funcional y contribuir al dolor crónico.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="concept-card__myth-item">
+                                            <div class="concept-card__myth-header">
+                                                <svg class="concept-card__myth-icon concept-card__myth-icon--false"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="10" stroke="#F44336" stroke-width="2" />
+                                                    <path d="M15 9l-6 6M9 9l6 6" stroke="#F44336" stroke-width="2"
+                                                        stroke-linecap="round" />
+                                                </svg>
+                                                <h5 class="concept-card__myth-title">Mito: "Las imágenes muestran la
+                                                    causa del dolor"</h5>
+                                            </div>
+                                            <div class="concept-card__myth-content">
+                                                <svg class="concept-card__myth-icon concept-card__myth-icon--true"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="10" stroke="#4CAF50" stroke-width="2" />
+                                                    <path d="M9 12l2 2 4-4" stroke="#4CAF50" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                                <p class="concept-card__myth-reality">
+                                                    <strong>Realidad:</strong> Muchos hallazgos en imágenes (hernias
+                                                    discales,
+                                                    artrosis, etc.) son comunes en personas sin dolor. La correlación
+                                                    entre
+                                                    hallazgos imagenológicos y dolor es débil. El diagnóstico debe
+                                                    basarse en
+                                                    la evaluación clínica integral.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="concept-card__myth-item">
+                                            <div class="concept-card__myth-header">
+                                                <svg class="concept-card__myth-icon concept-card__myth-icon--false"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="10" stroke="#F44336" stroke-width="2" />
+                                                    <path d="M15 9l-6 6M9 9l6 6" stroke="#F44336" stroke-width="2"
+                                                        stroke-linecap="round" />
+                                                </svg>
+                                                <h5 class="concept-card__myth-title">Mito: "El dolor crónico es solo
+                                                    psicológico"</h5>
+                                            </div>
+                                            <div class="concept-card__myth-content">
+                                                <svg class="concept-card__myth-icon concept-card__myth-icon--true"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="10" stroke="#4CAF50" stroke-width="2" />
+                                                    <path d="M9 12l2 2 4-4" stroke="#4CAF50" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                                <p class="concept-card__myth-reality">
+                                                    <strong>Realidad:</strong> El dolor crónico involucra cambios reales
+                                                    en el
+                                                    sistema nervioso (sensibilización central). Los factores
+                                                    psicológicos son
+                                                    parte integral de la experiencia de dolor, no su única causa. Todo
+                                                    dolor es
+                                                    real y válido, independientemente de su origen.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="concept-card__myth-item">
+                                            <div class="concept-card__myth-header">
+                                                <svg class="concept-card__myth-icon concept-card__myth-icon--false"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="10" stroke="#F44336" stroke-width="2" />
+                                                    <path d="M15 9l-6 6M9 9l6 6" stroke="#F44336" stroke-width="2"
+                                                        stroke-linecap="round" />
+                                                </svg>
+                                                <h5 class="concept-card__myth-title">Mito: "Hay que eliminar
+                                                    completamente el dolor"</h5>
+                                            </div>
+                                            <div class="concept-card__myth-content">
+                                                <svg class="concept-card__myth-icon concept-card__myth-icon--true"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="10" stroke="#4CAF50" stroke-width="2" />
+                                                    <path d="M9 12l2 2 4-4" stroke="#4CAF50" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                                <p class="concept-card__myth-reality">
+                                                    <strong>Realidad:</strong> El objetivo principal es mejorar la
+                                                    función y
+                                                    calidad de vida, no necesariamente eliminar todo el dolor. Aprender
+                                                    a
+                                                    manejar el dolor y mantener actividades significativas es más
+                                                    realista y
+                                                    efectivo que buscar la ausencia total de dolor.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <!-- Concept Card 5: Cómo Leer una Guía Clínica -->
+                                <article class="concept-card concept-card--guide">
+                                    <div class="concept-card__header">
+                                        <div class="concept-card__icon concept-card__icon--guide">
+                                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <rect width="48" height="48" rx="12" fill="#E8F5E9" />
+                                                <path d="M14 18h20M14 24h20M14 30h14" stroke="#4CAF50"
+                                                    stroke-width="2.5" stroke-linecap="round" />
+                                                <path d="M32 12v24" stroke="#4CAF50" stroke-width="2"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h4 class="concept-card__title">Cómo Leer una Guía Clínica</h4>
+                                    <p class="concept-card__text">
+                                        Las guías de práctica clínica son herramientas fundamentales para la toma de
+                                        decisiones basadas en evidencia. Comprender su estructura y cómo interpretarlas
+                                        es esencial para su aplicación efectiva.
+                                    </p>
+                                    <div class="concept-card__guide-steps">
+                                        <div class="concept-card__guide-step">
+                                            <div class="concept-card__guide-number">1</div>
+                                            <div class="concept-card__guide-content">
+                                                <h5 class="concept-card__guide-title">Identifica el Alcance y Objetivos
+                                                </h5>
+                                                <p class="concept-card__guide-text">
+                                                    Revisa la introducción para entender qué población, condición y
+                                                    contexto
+                                                    aborda la guía. Verifica si es aplicable a tu práctica y pacientes.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="concept-card__guide-step">
+                                            <div class="concept-card__guide-number">2</div>
+                                            <div class="concept-card__guide-content">
+                                                <h5 class="concept-card__guide-title">Comprende los Niveles de Evidencia
+                                                </h5>
+                                                <p class="concept-card__guide-text">
+                                                    Las guías clasifican la evidencia según su calidad (alta, moderada,
+                                                    baja).
+                                                    Esto indica cuánta confianza podemos tener en los resultados de la
+                                                    investigación.
+                                                </p>
+                                                <div class="concept-card__evidence-levels">
+                                                    <div class="concept-card__evidence-item">
+                                                        <span
+                                                            class="concept-card__evidence-badge concept-card__evidence-badge--high">Alta</span>
+                                                        <span class="concept-card__evidence-desc">Muy confiable, poco
+                                                            probable que cambie</span>
+                                                    </div>
+                                                    <div class="concept-card__evidence-item">
+                                                        <span
+                                                            class="concept-card__evidence-badge concept-card__evidence-badge--moderate">Moderada</span>
+                                                        <span class="concept-card__evidence-desc">Confianza moderada,
+                                                            puede cambiar</span>
+                                                    </div>
+                                                    <div class="concept-card__evidence-item">
+                                                        <span
+                                                            class="concept-card__evidence-badge concept-card__evidence-badge--low">Baja</span>
+                                                        <span class="concept-card__evidence-desc">Confianza limitada,
+                                                            probable que cambie</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="concept-card__guide-step">
+                                            <div class="concept-card__guide-number">3</div>
+                                            <div class="concept-card__guide-content">
+                                                <h5 class="concept-card__guide-title">Interpreta la Fuerza de las
+                                                    Recomendaciones</h5>
+                                                <p class="concept-card__guide-text">
+                                                    Las recomendaciones pueden ser fuertes o débiles/condicionales. Esto
+                                                    refleja
+                                                    el balance entre beneficios, riesgos, valores y preferencias del
+                                                    paciente.
+                                                </p>
+                                                <ul class="concept-card__list">
+                                                    <li><strong>Recomendación fuerte:</strong> "Se recomienda" - La
+                                                        mayoría de pacientes se beneficiarían</li>
+                                                    <li><strong>Recomendación condicional:</strong> "Se sugiere" -
+                                                        Depende más del contexto individual</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="concept-card__guide-step">
+                                            <div class="concept-card__guide-number">4</div>
+                                            <div class="concept-card__guide-content">
+                                                <h5 class="concept-card__guide-title">Considera el Contexto Local</h5>
+                                                <p class="concept-card__guide-text">
+                                                    Adapta las recomendaciones a tu contexto: recursos disponibles,
+                                                    características
+                                                    de tu población, valores culturales y preferencias del paciente.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="concept-card__guide-step">
+                                            <div class="concept-card__guide-number">5</div>
+                                            <div class="concept-card__guide-content">
+                                                <h5 class="concept-card__guide-title">Integra con la Decisión Compartida
+                                                </h5>
+                                                <p class="concept-card__guide-text">
+                                                    Las guías informan, no dictan. Discute las opciones con el paciente,
+                                                    considerando sus valores, preferencias y circunstancias
+                                                    individuales.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="concept-card__highlight-box concept-card__highlight-box--info">
+                                        <svg class="concept-card__highlight-icon" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <circle cx="12" cy="12" r="10" stroke="#2196F3" stroke-width="2" />
+                                            <path d="M12 16v-4M12 8h.01" stroke="#2196F3" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <p class="concept-card__highlight-text">
+                                            <strong>Recuerda:</strong> Las guías son herramientas para apoyar la toma de
+                                            decisiones clínicas, no reemplazan el juicio profesional ni la
+                                            individualización
+                                            del tratamiento. La evidencia debe integrarse con la experiencia clínica y
+                                            las
+                                            preferencias del paciente.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Info Box -->
+                            <div class="education__info-box">
+                                <svg class="education__info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                        stroke="#2196F3" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <p class="education__info-text">
+                                    <strong>Recursos adicionales:</strong> Para profundizar en estos conceptos, consulta
+                                    nuestras secciones de Guías de Práctica Clínica e Interpretación de Guías, donde
+                                    encontrarás material detallado y aplicaciones prácticas de estos principios.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Material Educativo Panel -->
+                    <div class="education__panel" role="tabpanel" id="tab-material"
+                        aria-labelledby="tab-button-material" data-panel="material" hidden>
+                        <div class="education__content">
+                            <h3 class="education__content-title">Material Educativo para Personas</h3>
+                            <p class="education__content-text">
+                                Próximamente publicaremos material educativo diseñado para personas con dolor,
+                                sus familias y cuidadores. Este contenido estará orientado a facilitar la comprensión
+                                del dolor desde una perspectiva actualizada y basada en evidencia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="guias" style="min-height: 100vh; padding: 4rem 1rem; background: #f5f5f5;">
+            <div class="container">
+                <h2>Guías de Práctica Clínica</h2>
+                <p>Accede a las principales guías de práctica clínica sobre dolor.</p>
+            </div>
+        </section>
+
+        <!-- Recursos Section -->
+        <section id="recursos" class="resources">
+            <div class="resources__container container">
+                <!-- Header -->
+                <div class="resources__header">
+                    <h2 class="resources__title">Recursos</h2>
+                    <p class="resources__subtitle">
+                        En esta sección reunimos instrumentos y recursos clínicos validados que apoyan la evaluación y
+                        el manejo del dolor en distintos contextos de trabajo.
+                    </p>
+                </div>
+
+                <!-- Info Section -->
+                <div class="resources__info">
+                    <div class="resources__info-card">
+                        <div class="resources__info-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M11 4H9a2 2 0 00-2 2v20a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2h-2M11 4a2 2 0 002 2h6a2 2 0 002-2M11 4a2 2 0 012-2h6a2 2 0 012 2m-8 12l2 2 4-4"
+                                    stroke="#2196F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="resources__info-content">
+                            <h3 class="resources__info-title">Escalas y Cuestionarios Validados</h3>
+                            <p class="resources__info-text">
+                                Accede a instrumentos de evaluación validados internacionalmente, incluyendo la Escala
+                                Tampa de Kinesiofobia (TSK), Pain Catastrophizing Scale (PCS), Pain, Enjoyment, General
+                                Activity (PEG), Oswestry Disability Index (ODI) y Brief Pain Inventory (BPI). Cada
+                                recurso incluye instrucciones de uso y criterios de interpretación.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="resources__info-card">
+                        <div class="resources__info-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M16 8v16m0-16C14.5 7 12.5 6.5 10.5 6.5S6.5 7 5 8v16c1.5-1 3.5-1.5 5.5-1.5s4 .5 5.5 1.5m0-16c1.5-1 3.5-1.5 5.5-1.5s4 .5 5.5 1.5v16c-1.5-1-3.5-1.5-5.5-1.5s-4 .5-5.5 1.5"
+                                    stroke="#009688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="resources__info-content">
+                            <h3 class="resources__info-title">Material de Referencia Rápida</h3>
+                            <p class="resources__info-text">
+                                Encuentra algoritmos de decisión clínica, checklists de banderas rojas y guías rápidas
+                                para el abordaje del dolor. Material diseñado para consulta inmediata en la práctica
+                                clínica diaria.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="resources__info-card">
+                        <div class="resources__info-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M6 20l5-5 5 5 8-8M8 28h16a2 2 0 002-2V6a2 2 0 00-2-2H8a2 2 0 00-2 2v20a2 2 0 002 2z"
+                                    stroke="#FF9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="resources__info-content">
+                            <h3 class="resources__info-title">Infografías Educativas</h3>
+                            <p class="resources__info-text">
+                                Recursos visuales para facilitar la educación en neurociencia del dolor, explicar el
+                                modelo biopsicosocial y desmitificar creencias comunes sobre el dolor. Ideales para
+                                compartir con pacientes y colegas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Navigation -->
+                <div class="resources__categories">
+                    <button class="resources__category-btn resources__category-btn--active" data-category="all"
+                        aria-pressed="true">
+                        <svg class="resources__category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M4 6h16M4 12h16M4 18h16"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Todos</span>
+                    </button>
+                    <button class="resources__category-btn" data-category="escalas" aria-pressed="false">
+                        <svg class="resources__category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Escalas y Cuestionarios</span>
+                    </button>
+                    <button class="resources__category-btn" data-category="referencia" aria-pressed="false">
+                        <svg class="resources__category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Material de Referencia</span>
+                    </button>
+                    <button class="resources__category-btn" data-category="infografias" aria-pressed="false">
+                        <svg class="resources__category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Infografías</span>
+                    </button>
+                </div>
+
+                <!-- Resources Grid -->
+                <div class="resources__grid" id="resources-grid">
+                    <!-- Resources will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" style="min-height: 100vh; padding: 4rem 1rem; background: #f5f5f5;">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>Ponte en contacto con SUFED.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
