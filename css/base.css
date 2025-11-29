@@ -128,6 +128,38 @@ img {
   display: block;
 }
 
+/* Image optimization - prevent layout shift (CLS) */
+img[width][height] {
+  height: auto;
+}
+
+/* Lazy loading placeholder - subtle background while loading */
+img[loading="lazy"]:not([src]) {
+  background-color: var(--color-neutral-100);
+}
+
+/* Image wrapper for aspect ratio preservation */
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-neutral-100);
+}
+
+.img-wrapper::before {
+  content: '';
+  display: block;
+  padding-top: var(--aspect-ratio, 66.67%); /* Default 3:2 ratio */
+}
+
+.img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 figure {
   margin: var(--space-6) 0;
 }

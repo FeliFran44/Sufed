@@ -189,54 +189,86 @@ Este documento contiene las tareas de implementación para construir el sitio we
   - Implementar texto descriptivo de la sección
   - _Requirements: 4.1, 4.3, 4.7_
 
-- [ ] 7. Implementar página "Competencias"
+- [x] 7. Implementar página "Competencias"
+
+
+
+
+
   - Crear estructura de página con texto provisional
   - Implementar diseño preparado para contenido futuro
   - Agregar mensaje: "Próximamente publicaremos las competencias profesionales..."
   - Preparar layout tipo "long scroll" para cuando esté el contenido
   - _Requirements: 5.1, 5.4_
 
-- [ ] 8. Crear página "Actividades y Novedades"
-- [ ] 8.1 Implementar sistema de cards para actividades
+- [x] 8. Crear página "Actividades y Novedades"
+
+
+
+
+
+- [x] 8.1 Implementar sistema de cards para actividades
+
+
   - Crear componente card con imagen, título, fecha y descripción
   - Implementar grid responsive
   - Agregar filtros por tipo de actividad (opcional)
   - _Requirements: 6.1, 6.2_
 
-- [ ] 8.2 Implementar ordenamiento cronológico
+- [x] 8.2 Implementar ordenamiento cronológico
+
+
   - Crear lógica para ordenar actividades por fecha
   - Mostrar actividades más recientes primero
   - Agregar indicadores visuales de tipo de actividad
   - _Requirements: 6.3, 6.5_
 
-- [ ] 9. Implementar formulario de contacto
-- [ ] 9.1 Crear estructura HTML del formulario
+- [x] 9. Implementar formulario de contacto
+
+
+
+
+
+- [x] 9.1 Crear estructura HTML del formulario
+
+
   - Implementar campos: Nombre, Email, Tema, Mensaje
   - Agregar labels accesibles con atributos ARIA
   - Implementar estructura semántica con fieldsets
   - _Requirements: 7.2_
 
-- [ ] 9.2 Implementar validación frontend
+- [x] 9.2 Implementar validación frontend
+
+
   - Crear validación de campos requeridos
   - Implementar validación de formato de email
   - Agregar validación de longitud mínima de mensaje
   - Mostrar mensajes de error claros y específicos
   - _Requirements: 7.3_
 
-- [ ] 9.3 Crear funcionalidad de envío
+- [x] 9.3 Crear funcionalidad de envío
+
+
   - Implementar JavaScript para capturar submit del formulario
   - Crear función para enviar datos (preparar para backend)
   - Implementar mensajes de éxito y error
   - Agregar protección anti-spam básica (honeypot)
   - _Requirements: 7.4, 7.5_
 
-- [ ] 9.4 Agregar texto descriptivo y contexto
+- [x] 9.4 Agregar texto descriptivo y contexto
+
+
   - Implementar texto: "Para consultas, propuestas o interés..."
   - Agregar información de contacto institucional
   - Preparar sección para preguntas frecuentes (opcional)
   - _Requirements: 7.1, 7.6_
 
-- [ ] 10. Crear componente Footer
+- [x] 10. Crear componente Footer
+
+
+
+
+
   - Implementar estructura con información de contacto
   - Agregar logos de AFU y SUFED
   - Incluir enlaces a secciones principales
@@ -245,15 +277,23 @@ Este documento contiene las tareas de implementación para construir el sitio we
   - Agregar enlaces a política de privacidad
   - _Requirements: 9.5_
 
-- [ ] 11. Implementar optimizaciones de performance
-- [ ] 11.1 Optimizar imágenes
+- [x] 11. Implementar optimizaciones de performance
+
+
+
+
+
+- [x] 11.1 Optimizar imágenes
+
   - Implementar lazy loading en todas las imágenes
   - Crear versiones responsive con srcset
   - Comprimir imágenes a calidad óptima
   - Agregar atributos width y height para evitar CLS
   - _Requirements: 10.1, 10.5_
 
-- [ ] 11.2 Optimizar CSS y JavaScript
+- [x] 11.2 Optimizar CSS y JavaScript
+
+
   - Minificar archivos CSS y JS
   - Implementar critical CSS inline
   - Agregar defer/async a scripts no críticos

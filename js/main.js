@@ -1399,3 +1399,580 @@
     // Initialize resources manager
     new ResourcesManager();
   });
+
+
+
+  // ========================================
+  // ACTIVITIES SECTION
+  // ========================================
+
+  class ActivitiesManager {
+    constructor() {
+      this.filterButtons = document.querySelectorAll('.activities__filter-btn');
+      this.activitiesGrid = document.getElementById('activities-grid');
+      this.emptyState = document.getElementById('activities-empty');
+      this.currentFilter = 'all';
+      
+      // Sample activities data (in production, this would come from CMS)
+      this.activities = [
+        {
+          id: 1,
+          title: 'Webinar: Abordaje Biopsicosocial del Dolor Crónico',
+          type: 'webinar',
+          date: '2025-12-15',
+          description: 'Únete a nuestro próximo webinar donde exploraremos las últimas evidencias en el manejo del dolor desde una perspectiva integral y biopsicosocial.',
+          image: 'assets/images/news-placeholder-1.svg',
+          location: 'Online',
+          link: '#'
+        },
+        {
+          id: 2,
+          title: 'Curso: Evaluación y Tratamiento del Dolor Lumbar',
+          type: 'curso',
+          date: '2025-12-01',
+          description: 'Curso intensivo de 3 días sobre evaluación clínica y estrategias de tratamiento basadas en evidencia para el dolor lumbar.',
+          image: 'assets/images/news-placeholder-2.svg',
+          location: 'Montevideo, Uruguay',
+          link: '#'
+        },
+        {
+          id: 3,
+          title: 'Reunión Mensual: Casos Clínicos Complejos',
+          type: 'reunion',
+          date: '2025-11-28',
+          description: 'Participa en nuestra reunión mensual donde discutiremos casos clínicos desafiantes y compartiremos experiencias del equipo.',
+          image: 'assets/images/news-placeholder-3.svg',
+          location: 'Sede AFU',
+          link: '#'
+        },
+        {
+          id: 4,
+          title: 'Charla: Neurofisiología del Dolor',
+          type: 'charla',
+          date: '2025-11-25',
+          description: 'Charla abierta sobre los mecanismos neurofisiológicos del dolor y su aplicación en la práctica clínica diaria.',
+          image: 'assets/images/news-placeholder-1.svg',
+          location: 'Online',
+          link: '#'
+        },
+        {
+          id: 5,
+          title: 'Colaboración: Jornada Interdisciplinaria de Dolor',
+          type: 'colaboracion',
+          date: '2025-11-20',
+          description: 'Jornada colaborativa con médicos, psicólogos y fisioterapeutas para discutir el abordaje interdisciplinario del dolor.',
+          image: 'assets/images/news-placeholder-2.svg',
+          location: 'Hospital de Clínicas',
+          link: '#'
+        },
+        {
+          id: 6,
+          title: 'Webinar: Actualización en Guías NICE 2024',
+          type: 'webinar',
+          date: '2025-11-18',
+          description: 'Revisión de las actualizaciones más recientes de las guías NICE para el manejo del dolor crónico y su aplicación en Uruguay.',
+          image: 'assets/images/news-placeholder-3.svg',
+          location: 'Online',
+          link: '#'
+        },
+        {
+          id: 7,
+          title: 'Curso: Educación Terapéutica en Dolor',
+          type: 'curso',
+          date: '2025-11-10',
+          description: 'Aprende estrategias efectivas de educación terapéutica para personas con dolor crónico basadas en la neurociencia del dolor.',
+          image: 'assets/images/news-placeholder-1.svg',
+          location: 'Montevideo, Uruguay',
+          link: '#'
+        },
+        {
+          id: 8,
+          title: 'Charla: Mitos y Realidades sobre el Dolor',
+          type: 'charla',
+          date: '2025-11-05',
+          description: 'Desmitificando creencias comunes sobre el dolor y promoviendo un entendimiento actualizado basado en evidencia.',
+          image: 'assets/images/news-placeholder-2.svg',
+          location: 'Sede AFU',
+          link: '#'
+        }
+      ];
+      
+      this.init();
+    }
+
+    init() {
+      if (!this.activitiesGrid) return;
+
+      // Sort activities by date (most recent first)
+      this.sortActivitiesByDate();
+      
+      // Render initial activities
+      this.renderActivities();
+      
+      // Bind filter events
+      this.bindFilterEvents();
+    }
+
+    sortActivitiesByDate() {
+      this.activities.sort((a, b) => {
+        return new Date(b.date) - new Date(a.date);
+      });
+    }
+
+    bindFilterEvents() {
+      this.filterButtons.forEach(button => {
+        button.addEventListener('click', (e) => this.handleFilterClick(e.currentTarget));
+      });
+    }
+
+    handleFilterClick(button) {
+      const filter = button.dataset.filter;
+      
+      // Update active button
+      this.filterButtons.forEach(btn => {
+        btn.classList.remove('activities__filter-btn--active');
+      });
+      button.classList.add('activities__filter-btn--active');
+      
+      // Update current filter
+      this.currentFilter = filter;
+      
+      // Filter and render activities
+      this.filterActivities();
+    }
+
+    filterActivities() {
+      const cards = this.activitiesGrid.querySelectorAll('.activity-card');
+      let visibleCount = 0;
+      
+      cards.forEach(card => {
+        const cardType = card.dataset.type;
+        
+        if (this.currentFilter === 'all' || cardType === this.currentFilter) {
+          card.classList.remove('activity-card--hidden');
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.classList.add('activity-card--hidden');
+          card.style.display = 'none';
+        }
+      });
+      
+      // Show/hide empty state
+      if (visibleCount === 0) {
+        this.emptyState.style.display = 'flex';
+      } else {
+        this.emptyState.style.display = 'none';
+      }
+    }
+
+    renderActivities() {
+      if (!this.activitiesGrid) return;
+      
+      // Clear existing content
+      this.activitiesGrid.innerHTML = '';
+      
+      // Render each activity
+      this.activities.forEach(activity => {
+        const card = this.createActivityCard(activity);
+        this.activitiesGrid.appendChild(card);
+      });
+    }
+
+    createActivityCard(activity) {
+      const card = document.createElement('article');
+      card.className = 'activity-card';
+      card.dataset.type = activity.type;
+      
+      // Format date
+      const formattedDate = this.formatDate(activity.date);
+      
+      // Get type label and icon
+      const typeInfo = this.getTypeInfo(activity.type);
+      
+      card.innerHTML = `
+        <div class="activity-card__image-wrapper">
+          <img src="${activity.image}" 
+               alt="${activity.title}" 
+               class="activity-card__image" 
+               loading="lazy" 
+               width="400" 
+               height="225">
+          <span class="activity-card__badge activity-card__badge--${activity.type}">
+            ${typeInfo.icon}
+            <span>${typeInfo.label}</span>
+          </span>
+        </div>
+        <div class="activity-card__content">
+          <time class="activity-card__date" datetime="${activity.date}">
+            <svg class="activity-card__date-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2h1a2 2 0 012 2v9a2 2 0 01-2 2H3a2 2 0 01-2-2V4a2 2 0 012-2h1m8 0V1m0 1v1m0-1H4m0 0V1m0 1v1m-1 3h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            ${formattedDate}
+          </time>
+          <h3 class="activity-card__title">${activity.title}</h3>
+          <p class="activity-card__description">${activity.description}</p>
+          <div class="activity-card__footer">
+            <span class="activity-card__location">
+              <svg class="activity-card__location-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8 8a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 14s-5-4-5-8a5 5 0 0110 0c0 4-5 8-5 8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              ${activity.location}
+            </span>
+            <a href="${activity.link}" class="activity-card__link">
+              Más información
+              <svg class="activity-card__link-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      `;
+      
+      return card;
+    }
+
+    formatDate(dateString) {
+      const date = new Date(dateString);
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return date.toLocaleDateString('es-UY', options);
+    }
+
+    getTypeInfo(type) {
+      const types = {
+        webinar: {
+          label: 'Webinar',
+          icon: `<svg class="activity-card__badge-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M10.5 7a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-3.5-4.9v1.4m0 7v1.4m4.9-4.9h-1.4M3.5 7H2.1m8.45-3.55l-.99.99M4.44 9.56l-.99.99m6.93 0l-.99-.99M4.44 4.44l-.99-.99" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>`
+        },
+        curso: {
+          label: 'Curso',
+          icon: `<svg class="activity-card__badge-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M7 9.8l6.3-3.5L7 2.8.7 6.3 7 9.8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7 9.8l4.31-2.39a8.458 8.458 0 01.47 4.53A8.366 8.366 0 007 14.04a8.366 8.366 0 00-4.78-2.1 8.455 8.455 0 01.47-4.53L7 9.8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+        },
+        charla: {
+          label: 'Charla',
+          icon: `<svg class="activity-card__badge-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M11.9 5.6h1.4a1.4 1.4 0 011.4 1.4v4.2a1.4 1.4 0 01-1.4 1.4h-1.4v2.8l-2.8-2.8H6.3a1.396 1.396 0 01-.99-.41m0 0L7.7 9.8h2.8a1.4 1.4 0 001.4-1.4V4.2a1.4 1.4 0 00-1.4-1.4H3.5a1.4 1.4 0 00-1.4 1.4v4.2a1.4 1.4 0 001.4 1.4h1.4v2.8l.41-.41z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+        },
+        reunion: {
+          label: 'Reunión',
+          icon: `<svg class="activity-card__badge-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M11.9 14h3.5v-1.4a2.1 2.1 0 00-3.75-1.3M11.9 14H4.9m7 0v-1.4c0-.46-.09-.9-.25-1.3M4.9 14H1.4v-1.4a2.1 2.1 0 013.75-1.3M4.9 14v-1.4c0-.46.09-.9.25-1.3m0 0a3.501 3.501 0 016.5 0M10.5 4.9a2.1 2.1 0 11-4.2 0 2.1 2.1 0 014.2 0zm4.2 2.1a1.4 1.4 0 11-2.8 0 1.4 1.4 0 012.8 0zM4.9 7a1.4 1.4 0 11-2.8 0 1.4 1.4 0 012.8 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+        },
+        colaboracion: {
+          label: 'Colaboración',
+          icon: `<svg class="activity-card__badge-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M8.4 3.05a2.8 2.8 0 110 3.7M10.5 14.7H2.1v-.7a4.2 4.2 0 018.4 0v.7zm0 0h4.2v-.7a4.2 4.2 0 00-6.3-3.64M9.1 4.9a2.8 2.8 0 11-5.6 0 2.8 2.8 0 015.6 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+        }
+      };
+      
+      return types[type] || types.webinar;
+    }
+  }
+
+  // Initialize Activities Manager when DOM is ready
+  document.addEventListener('DOMContentLoaded', function() {
+    new ActivitiesManager();
+  });
+
+
+// ========================================
+// CONTACT FORM VALIDATION & SUBMISSION
+// ========================================
+
+class ContactForm {
+  constructor() {
+    this.form = document.getElementById('contact-form');
+    this.formMessage = document.getElementById('form-message');
+    
+    if (!this.form) return;
+
+    this.fields = {
+      name: {
+        element: document.getElementById('contact-name'),
+        error: document.getElementById('name-error'),
+        validators: ['required', 'minLength']
+      },
+      email: {
+        element: document.getElementById('contact-email'),
+        error: document.getElementById('email-error'),
+        validators: ['required', 'email']
+      },
+      subject: {
+        element: document.getElementById('contact-subject'),
+        error: document.getElementById('subject-error'),
+        validators: ['required']
+      },
+      message: {
+        element: document.getElementById('contact-message'),
+        error: document.getElementById('message-error'),
+        validators: ['required', 'minLength']
+      }
+    };
+
+    this.honeypot = document.getElementById('contact-website');
+    this.submitButton = this.form.querySelector('.contact-form__submit');
+    
+    this.init();
+  }
+
+  init() {
+    this.bindEvents();
+  }
+
+  bindEvents() {
+    // Form submission
+    this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+
+    // Real-time validation on blur
+    Object.keys(this.fields).forEach(fieldName => {
+      const field = this.fields[fieldName];
+      if (field.element) {
+        field.element.addEventListener('blur', () => this.validateField(fieldName));
+        
+        // Clear error on input
+        field.element.addEventListener('input', () => {
+          if (field.element.classList.contains('is-invalid')) {
+            this.clearFieldError(fieldName);
+          }
+        });
+      }
+    });
+  }
+
+  async handleSubmit(event) {
+    event.preventDefault();
+
+    // Check honeypot (anti-spam)
+    if (this.honeypot && this.honeypot.value !== '') {
+      console.warn('Spam detected');
+      return;
+    }
+
+    // Validate all fields
+    const isValid = this.validateForm();
+
+    if (!isValid) {
+      this.showFormMessage('Por favor corrige los errores antes de enviar', 'error');
+      // Focus first invalid field
+      const firstInvalidField = this.form.querySelector('.is-invalid');
+      if (firstInvalidField) {
+        firstInvalidField.focus();
+      }
+      return;
+    }
+
+    // Get form data
+    const formData = this.getFormData();
+
+    // Submit form
+    await this.submitForm(formData);
+  }
+
+  validateForm() {
+    let isValid = true;
+
+    Object.keys(this.fields).forEach(fieldName => {
+      if (!this.validateField(fieldName)) {
+        isValid = false;
+      }
+    });
+
+    return isValid;
+  }
+
+  validateField(fieldName) {
+    const field = this.fields[fieldName];
+    if (!field || !field.element) return true;
+
+    const value = field.element.value.trim();
+    const validators = field.validators;
+
+    // Clear previous error
+    this.clearFieldError(fieldName);
+
+    // Run validators
+    for (const validator of validators) {
+      const result = this.runValidator(validator, value, field.element);
+      
+      if (!result.isValid) {
+        this.showFieldError(fieldName, result.message);
+        field.element.classList.add('is-invalid');
+        field.element.classList.remove('is-valid');
+        return false;
+      }
+    }
+
+    // Field is valid
+    field.element.classList.remove('is-invalid');
+    field.element.classList.add('is-valid');
+    return true;
+  }
+
+  runValidator(validatorName, value, element) {
+    switch (validatorName) {
+      case 'required':
+        return {
+          isValid: value.length > 0,
+          message: 'Este campo es obligatorio'
+        };
+
+      case 'email':
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return {
+          isValid: emailRegex.test(value),
+          message: 'Por favor ingresa un email válido'
+        };
+
+      case 'minLength':
+        const minLength = element.getAttribute('minlength') || 20;
+        return {
+          isValid: value.length >= minLength,
+          message: `El mensaje debe tener al menos ${minLength} caracteres`
+        };
+
+      default:
+        return { isValid: true, message: '' };
+    }
+  }
+
+  showFieldError(fieldName, message) {
+    const field = this.fields[fieldName];
+    if (field && field.error) {
+      field.error.textContent = message;
+      field.error.style.display = 'block';
+    }
+  }
+
+  clearFieldError(fieldName) {
+    const field = this.fields[fieldName];
+    if (field && field.error) {
+      field.error.textContent = '';
+      field.error.style.display = 'none';
+    }
+  }
+
+  getFormData() {
+    return {
+      name: this.fields.name.element.value.trim(),
+      email: this.fields.email.element.value.trim(),
+      subject: this.fields.subject.element.value,
+      message: this.fields.message.element.value.trim(),
+      timestamp: new Date().toISOString()
+    };
+  }
+
+  async submitForm(formData) {
+    // Show loading state
+    this.setSubmitButtonLoading(true);
+    this.hideFormMessage();
+
+    try {
+      // Simulate API call (replace with actual endpoint)
+      await this.sendToBackend(formData);
+
+      // Success
+      this.showFormMessage(
+        'Tu mensaje ha sido enviado correctamente. Te responderemos pronto.',
+        'success'
+      );
+
+      // Reset form
+      this.form.reset();
+      
+      // Clear validation states
+      Object.keys(this.fields).forEach(fieldName => {
+        const field = this.fields[fieldName];
+        if (field.element) {
+          field.element.classList.remove('is-valid', 'is-invalid');
+        }
+      });
+
+      // Scroll to message
+      this.formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    } catch (error) {
+      console.error('Form submission error:', error);
+      this.showFormMessage(
+        'Hubo un problema al enviar el formulario. Por favor intenta nuevamente más tarde.',
+        'error'
+      );
+    } finally {
+      this.setSubmitButtonLoading(false);
+    }
+  }
+
+  async sendToBackend(formData) {
+    // Simulate network delay
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    // In production, this would be an actual API call:
+    /*
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    return await response.json();
+    */
+
+    // For now, just log the data
+    console.log('Form data to be sent:', formData);
+    
+    // Simulate success
+    return { success: true };
+  }
+
+  setSubmitButtonLoading(isLoading) {
+    if (!this.submitButton) return;
+
+    if (isLoading) {
+      this.submitButton.disabled = true;
+      this.submitButton.classList.add('is-loading');
+      this.submitButton.setAttribute('aria-busy', 'true');
+      
+      const buttonText = this.submitButton.querySelector('span');
+      if (buttonText) {
+        buttonText.textContent = 'Enviando...';
+      }
+    } else {
+      this.submitButton.disabled = false;
+      this.submitButton.classList.remove('is-loading');
+      this.submitButton.setAttribute('aria-busy', 'false');
+      
+      const buttonText = this.submitButton.querySelector('span');
+      if (buttonText) {
+        buttonText.textContent = 'Enviar mensaje';
+      }
+    }
+  }
+
+  showFormMessage(message, type) {
+    if (!this.formMessage) return;
+
+    this.formMessage.textContent = message;
+    this.formMessage.className = `contact-form__message contact-form__message--${type} is-visible`;
+  }
+
+  hideFormMessage() {
+    if (!this.formMessage) return;
+
+    this.formMessage.className = 'contact-form__message';
+    this.formMessage.textContent = '';
+  }
+}
+
+// Initialize contact form when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  new ContactForm();
+});
