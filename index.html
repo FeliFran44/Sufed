@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
-    
+
     <!-- Production: Use minified bundle -->
     <!-- <link rel="stylesheet" href="dist/css/bundle.min.css"> -->
 </head>
@@ -151,19 +151,8 @@
 
                 <div class="hero__image-wrapper">
                     <img src="assets/images/sufed.jpg"
-                        srcset="assets/images/sufed-400.jpg 400w,
-                                assets/images/sufed-600.jpg 600w,
-                                assets/images/sufed-800.jpg 800w,
-                                assets/images/sufed.jpg 1200w"
-                        sizes="(max-width: 640px) 100vw,
-                               (max-width: 1024px) 50vw,
-                               600px"
-                        alt="Equipo interdisciplinario de SUFED trabajando en el manejo del dolor" 
-                        class="hero__image"
-                        loading="eager"
-                        width="600" 
-                        height="400"
-                        decoding="async">
+                        alt="Equipo interdisciplinario de SUFED trabajando en el manejo del dolor" class="hero__image"
+                        loading="eager" width="600" height="400" decoding="async">
                 </div>
             </div>
         </section>
@@ -229,13 +218,8 @@
                     <!-- News Card 1 -->
                     <article class="news-card">
                         <div class="news-card__image-wrapper">
-                            <img src="assets/images/news-placeholder-1.svg" 
-                                alt="Webinar sobre manejo del dolor crónico"
-                                class="news-card__image" 
-                                loading="lazy" 
-                                width="400" 
-                                height="250"
-                                decoding="async">
+                            <img src="assets/images/news-placeholder-1.svg" alt="Webinar sobre manejo del dolor crónico"
+                                class="news-card__image" loading="lazy" width="400" height="250" decoding="async">
                             <span class="news-card__badge news-card__badge--webinar">Webinar</span>
                         </div>
                         <div class="news-card__content">
@@ -259,13 +243,8 @@
                     <!-- News Card 2 -->
                     <article class="news-card">
                         <div class="news-card__image-wrapper">
-                            <img src="assets/images/news-placeholder-2.svg" 
-                                alt="Nueva guía NICE sobre dolor lumbar"
-                                class="news-card__image" 
-                                loading="lazy" 
-                                width="400" 
-                                height="250"
-                                decoding="async">
+                            <img src="assets/images/news-placeholder-2.svg" alt="Nueva guía NICE sobre dolor lumbar"
+                                class="news-card__image" loading="lazy" width="400" height="250" decoding="async">
                             <span class="news-card__badge news-card__badge--publication">Publicación</span>
                         </div>
                         <div class="news-card__content">
@@ -289,13 +268,8 @@
                     <!-- News Card 3 -->
                     <article class="news-card">
                         <div class="news-card__image-wrapper">
-                            <img src="assets/images/news-placeholder-3.svg" 
-                                alt="Reunión mensual de SUFED"
-                                class="news-card__image" 
-                                loading="lazy" 
-                                width="400" 
-                                height="250"
-                                decoding="async">
+                            <img src="assets/images/news-placeholder-3.svg" alt="Reunión mensual de SUFED"
+                                class="news-card__image" loading="lazy" width="400" height="250" decoding="async">
                             <span class="news-card__badge news-card__badge--event">Evento</span>
                         </div>
                         <div class="news-card__content">
@@ -647,6 +621,11 @@
 
                 <!-- Relación con AFU -->
                 <div class="about__afu-relation">
+                    <div class="about__afu-logo-wrapper">
+                        <img src="assets/images/afu.jpg"
+                            alt="Logo de la Asociación de Fisioterapeutas del Uruguay (AFU)" class="about__afu-logo"
+                            loading="lazy" width="300" height="300">
+                    </div>
                     <div class="about__afu-content">
                         <h3 class="about__section-title">Nuestra Relación con AFU</h3>
                         <p class="about__text">
@@ -794,7 +773,8 @@
                                             Ver guías originales
                                         </a>
                                         <button class="guideline-card__link guideline-card__link--download"
-                                            data-download-pdf="nice" data-guide="nice" aria-label="Descargar interpretación SUFED de guías NICE">
+                                            data-download-pdf="nice" data-guide="nice"
+                                            aria-label="Descargar interpretación SUFED de guías NICE">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                 <path
@@ -923,7 +903,8 @@
                                             Ver guías originales
                                         </a>
                                         <button class="guideline-card__link guideline-card__link--download"
-                                            data-download-pdf="iasp" data-guide="iasp" aria-label="Descargar interpretación SUFED de guías IASP">
+                                            data-download-pdf="iasp" data-guide="iasp"
+                                            aria-label="Descargar interpretación SUFED de guías IASP">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                 <path
@@ -1881,9 +1862,8 @@
                         aria-pressed="true">
                         <svg class="resources__category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path
-                                d="M4 6h16M4 12h16M4 18h16"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <span>Todos</span>
                     </button>
@@ -1935,7 +1915,8 @@
                             <path d="M40 20L50 35H30L40 20Z" fill="#009688" />
                             <rect x="30" y="35" width="20" height="25" fill="#1976D2" opacity="0.7" />
                             <circle cx="40" cy="47.5" r="8" fill="#FFFFFF" />
-                            <path d="M37 47.5L39 49.5L43 45.5" stroke="#009688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M37 47.5L39 49.5L43 45.5" stroke="#009688" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <h2 class="competencias__title">Competencias Profesionales</h2>
@@ -1957,8 +1938,8 @@
                         </div>
                         <h3 class="competencias__announcement-title">Próximamente</h3>
                         <p class="competencias__announcement-text">
-                            Próximamente publicaremos las competencias profesionales recomendadas para el fisioterapeuta 
-                            que trabaja en el ámbito del dolor, basadas en modelos internacionales y adaptadas a la 
+                            Próximamente publicaremos las competencias profesionales recomendadas para el fisioterapeuta
+                            que trabaja en el ámbito del dolor, basadas en modelos internacionales y adaptadas a la
                             realidad uruguaya.
                         </p>
                     </div>
@@ -1974,13 +1955,13 @@
                                         <path d="M16 4L4 10v8c0 7.3 5 14.2 12 16 7-1.8 12-8.7 12-16v-8L16 4z"
                                             stroke="#2196F3" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round" />
-                                        <path d="M12 16l2 2 4-4" stroke="#009688" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
+                                        <path d="M12 16l2 2 4-4" stroke="#009688" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </div>
                                 <h4 class="competencias__preview-card-title">Unidades de Dolor</h4>
                                 <p class="competencias__preview-card-text">
-                                    Definición y características de las unidades de dolor según estándares IASP, 
+                                    Definición y características de las unidades de dolor según estándares IASP,
                                     adaptadas al contexto uruguayo.
                                 </p>
                             </div>
@@ -1996,7 +1977,7 @@
                                 </div>
                                 <h4 class="competencias__preview-card-title">Competencias Clínicas</h4>
                                 <p class="competencias__preview-card-text">
-                                    Habilidades específicas para la evaluación, diagnóstico y tratamiento del dolor 
+                                    Habilidades específicas para la evaluación, diagnóstico y tratamiento del dolor
                                     desde la fisioterapia.
                                 </p>
                             </div>
@@ -2014,7 +1995,7 @@
                                 </div>
                                 <h4 class="competencias__preview-card-title">Trabajo Interdisciplinario</h4>
                                 <p class="competencias__preview-card-text">
-                                    Competencias para la colaboración efectiva con otros profesionales de la salud 
+                                    Competencias para la colaboración efectiva con otros profesionales de la salud
                                     en el manejo del dolor.
                                 </p>
                             </div>
@@ -2031,7 +2012,7 @@
                                 </div>
                                 <h4 class="competencias__preview-card-title">Ética Profesional</h4>
                                 <p class="competencias__preview-card-text">
-                                    Principios éticos y profesionales para el abordaje responsable y centrado en 
+                                    Principios éticos y profesionales para el abordaje responsable y centrado en
                                     la persona con dolor.
                                 </p>
                             </div>
@@ -2155,7 +2136,8 @@
                 <div class="contact__header">
                     <h2 class="contact__title">Contacto</h2>
                     <p class="contact__intro">
-                        Para consultas, propuestas o interés en nuestras actividades, podés comunicarte con el equipo SUFED a través de este formulario.
+                        Para consultas, propuestas o interés en nuestras actividades, podés comunicarte con el equipo
+                        SUFED a través de este formulario.
                     </p>
                 </div>
 
@@ -2171,50 +2153,33 @@
                                     <label for="contact-name" class="contact-form__label">
                                         Nombre <span class="contact-form__required" aria-label="requerido">*</span>
                                     </label>
-                                    <input 
-                                        type="text" 
-                                        id="contact-name" 
-                                        name="name" 
-                                        class="contact-form__input"
-                                        required
-                                        aria-required="true"
-                                        aria-describedby="name-error"
-                                        autocomplete="name"
-                                    >
-                                    <span id="name-error" class="contact-form__error" role="alert" aria-live="polite"></span>
+                                    <input type="text" id="contact-name" name="name" class="contact-form__input"
+                                        required aria-required="true" aria-describedby="name-error" autocomplete="name">
+                                    <span id="name-error" class="contact-form__error" role="alert"
+                                        aria-live="polite"></span>
                                 </div>
 
                                 <!-- Email Field -->
                                 <div class="contact-form__field">
                                     <label for="contact-email" class="contact-form__label">
-                                        Correo electrónico <span class="contact-form__required" aria-label="requerido">*</span>
+                                        Correo electrónico <span class="contact-form__required"
+                                            aria-label="requerido">*</span>
                                     </label>
-                                    <input 
-                                        type="email" 
-                                        id="contact-email" 
-                                        name="email" 
-                                        class="contact-form__input"
-                                        required
-                                        aria-required="true"
-                                        aria-describedby="email-error"
-                                        autocomplete="email"
-                                    >
-                                    <span id="email-error" class="contact-form__error" role="alert" aria-live="polite"></span>
+                                    <input type="email" id="contact-email" name="email" class="contact-form__input"
+                                        required aria-required="true" aria-describedby="email-error"
+                                        autocomplete="email">
+                                    <span id="email-error" class="contact-form__error" role="alert"
+                                        aria-live="polite"></span>
                                 </div>
 
                                 <!-- Subject Field -->
                                 <div class="contact-form__field">
                                     <label for="contact-subject" class="contact-form__label">
-                                        Tema de la consulta <span class="contact-form__required" aria-label="requerido">*</span>
+                                        Tema de la consulta <span class="contact-form__required"
+                                            aria-label="requerido">*</span>
                                     </label>
-                                    <select 
-                                        id="contact-subject" 
-                                        name="subject" 
-                                        class="contact-form__select"
-                                        required
-                                        aria-required="true"
-                                        aria-describedby="subject-error"
-                                    >
+                                    <select id="contact-subject" name="subject" class="contact-form__select" required
+                                        aria-required="true" aria-describedby="subject-error">
                                         <option value="">Selecciona un tema</option>
                                         <option value="consulta-general">Consulta general</option>
                                         <option value="propuesta-colaboracion">Propuesta de colaboración</option>
@@ -2222,7 +2187,8 @@
                                         <option value="solicitud-informacion">Solicitud de información</option>
                                         <option value="otro">Otro</option>
                                     </select>
-                                    <span id="subject-error" class="contact-form__error" role="alert" aria-live="polite"></span>
+                                    <span id="subject-error" class="contact-form__error" role="alert"
+                                        aria-live="polite"></span>
                                 </div>
 
                                 <!-- Message Field -->
@@ -2230,41 +2196,30 @@
                                     <label for="contact-message" class="contact-form__label">
                                         Mensaje <span class="contact-form__required" aria-label="requerido">*</span>
                                     </label>
-                                    <textarea 
-                                        id="contact-message" 
-                                        name="message" 
-                                        class="contact-form__textarea"
-                                        rows="6"
-                                        required
-                                        aria-required="true"
-                                        aria-describedby="message-error message-hint"
-                                        minlength="20"
-                                    ></textarea>
+                                    <textarea id="contact-message" name="message" class="contact-form__textarea"
+                                        rows="6" required aria-required="true"
+                                        aria-describedby="message-error message-hint" minlength="20"></textarea>
                                     <span id="message-hint" class="contact-form__hint">Mínimo 20 caracteres</span>
-                                    <span id="message-error" class="contact-form__error" role="alert" aria-live="polite"></span>
+                                    <span id="message-error" class="contact-form__error" role="alert"
+                                        aria-live="polite"></span>
                                 </div>
 
                                 <!-- Honeypot field (anti-spam) -->
                                 <div class="contact-form__honeypot" aria-hidden="true">
                                     <label for="contact-website">Website</label>
-                                    <input 
-                                        type="text" 
-                                        id="contact-website" 
-                                        name="website" 
-                                        tabindex="-1"
-                                        autocomplete="off"
-                                    >
+                                    <input type="text" id="contact-website" name="website" tabindex="-1"
+                                        autocomplete="off">
                                 </div>
 
                                 <!-- Submit Button -->
                                 <div class="contact-form__actions">
-                                    <button 
-                                        type="submit" 
-                                        class="contact-form__submit"
-                                        aria-label="Enviar formulario de contacto"
-                                    >
-                                        <svg class="contact-form__submit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                            <path d="M2 10l16-8-8 16-2-8-6-0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <button type="submit" class="contact-form__submit"
+                                        aria-label="Enviar formulario de contacto">
+                                        <svg class="contact-form__submit-icon" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true">
+                                            <path d="M2 10l16-8-8 16-2-8-6-0z" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                         <span>Enviar mensaje</span>
                                     </button>
@@ -2273,7 +2228,8 @@
                         </form>
 
                         <!-- Form Messages -->
-                        <div id="form-message" class="contact-form__message" role="status" aria-live="polite" aria-atomic="true"></div>
+                        <div id="form-message" class="contact-form__message" role="status" aria-live="polite"
+                            aria-atomic="true"></div>
                     </div>
 
                     <!-- Contact Info Sidebar -->
@@ -2281,24 +2237,35 @@
                         <div class="contact-info">
                             <h3 class="contact-info__title">Información de contacto</h3>
                             <p class="contact-info__text">
-                                SUFED es un Grupo de Interés Especial (SIG) de la Asociación de Fisioterapeutas del Uruguay (AFU).
+                                SUFED es un Grupo de Interés Especial (SIG) de la Asociación de Fisioterapeutas del
+                                Uruguay (AFU).
                             </p>
 
                             <div class="contact-info__items">
                                 <div class="contact-info__item">
-                                    <svg class="contact-info__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <svg class="contact-info__icon" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
                                     </svg>
                                     <div>
                                         <h4 class="contact-info__item-title">Email</h4>
-                                        <a href="mailto:contacto@sufed.org.uy" class="contact-info__link">contacto@sufed.org.uy</a>
+                                        <a href="mailto:contacto@sufed.org.uy"
+                                            class="contact-info__link">contacto@sufed.org.uy</a>
                                     </div>
                                 </div>
 
                                 <div class="contact-info__item">
-                                    <svg class="contact-info__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                        <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <svg class="contact-info__icon" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                     <div>
                                         <h4 class="contact-info__item-title">Ubicación</h4>
@@ -2307,20 +2274,25 @@
                                 </div>
 
                                 <div class="contact-info__item">
-                                    <svg class="contact-info__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <svg class="contact-info__icon" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                     <div>
                                         <h4 class="contact-info__item-title">Afiliación</h4>
-                                        <p class="contact-info__text">Asociación de Fisioterapeutas del Uruguay (AFU)</p>
+                                        <p class="contact-info__text">Asociación de Fisioterapeutas del Uruguay (AFU)
+                                        </p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="contact-info__note">
                                 <p>
-                                    <strong>Tiempo de respuesta:</strong> Nos esforzamos por responder todas las consultas en un plazo de 48 horas hábiles.
+                                    <strong>Tiempo de respuesta:</strong> Nos esforzamos por responder todas las
+                                    consultas en un plazo de 48 horas hábiles.
                                 </p>
                             </div>
                         </div>
@@ -2341,7 +2313,8 @@
                         <span class="footer__logo-text">SUFED</span>
                     </div>
                     <p class="footer__description">
-                        Sociedad Uruguaya de Fisioterapia Especializada en Dolor. Grupo de Interés Especial (SIG) de AFU dedicado a promover una fisioterapia basada en evidencia.
+                        Sociedad Uruguaya de Fisioterapia Especializada en Dolor. Grupo de Interés Especial (SIG) de AFU
+                        dedicado a promover una fisioterapia basada en evidencia.
                     </p>
                     <div class="footer__logos">
                         <div class="footer__logo-item">
@@ -2400,23 +2373,35 @@
                     <h3 class="footer__column-title">Contacto</h3>
                     <ul class="footer__contact">
                         <li class="footer__contact-item">
-                            <svg class="footer__contact-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M2.5 6.667l6.575 4.383a1.667 1.667 0 001.85 0l6.575-4.383M4.167 15.833h11.666a1.667 1.667 0 001.667-1.666V5.833a1.667 1.667 0 00-1.667-1.666H4.167a1.667 1.667 0 00-1.667 1.666v8.334a1.667 1.667 0 001.667 1.666z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg class="footer__contact-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M2.5 6.667l6.575 4.383a1.667 1.667 0 001.85 0l6.575-4.383M4.167 15.833h11.666a1.667 1.667 0 001.667-1.666V5.833a1.667 1.667 0 00-1.667-1.666H4.167a1.667 1.667 0 00-1.667 1.666v8.334a1.667 1.667 0 001.667 1.666z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
-                            <a href="mailto:contacto@sufed.org.uy" class="footer__contact-link">contacto@sufed.org.uy</a>
+                            <a href="mailto:contacto@sufed.org.uy"
+                                class="footer__contact-link">contacto@sufed.org.uy</a>
                         </li>
                         <li class="footer__contact-item">
-                            <svg class="footer__contact-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M14.714 13.881L11.178 17.417a1.665 1.665 0 01-2.356 0l-3.536-3.536a6.667 6.667 0 119.428 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12.5 9.167a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg class="footer__contact-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M14.714 13.881L11.178 17.417a1.665 1.665 0 01-2.356 0l-3.536-3.536a6.667 6.667 0 119.428 0z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12.5 9.167a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                             <span class="footer__contact-text">Montevideo, Uruguay</span>
                         </li>
                         <li class="footer__contact-item">
                             <a href="#contacto" class="footer__cta-button">
                                 Enviar Consulta
-                                <svg class="footer__cta-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg class="footer__cta-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
                             </a>
                         </li>
@@ -2428,7 +2413,8 @@
             <div class="footer__bottom">
                 <div class="footer__bottom-content">
                     <p class="footer__copyright">
-                        &copy; 2025 SUFED - Sociedad Uruguaya de Fisioterapia Especializada en Dolor. Todos los derechos reservados.
+                        &copy; 2025 SUFED - Sociedad Uruguaya de Fisioterapia Especializada en Dolor. Todos los derechos
+                        reservados.
                     </p>
                     <div class="footer__legal">
                         <a href="#privacidad" class="footer__legal-link">Política de Privacidad</a>

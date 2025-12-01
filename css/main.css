@@ -15,12 +15,52 @@
   font-weight: var(--font-medium);
   z-index: calc(var(--z-modal) + 1);
   transition: top var(--transition-fast);
+  border-radius: var(--radius-sm);
 }
 
 .skip-link:focus {
   top: 0;
-  outline: 2px solid var(--color-primary-700);
+  outline: 3px solid var(--color-primary-700);
   outline-offset: 2px;
+}
+
+/* ========================================
+   GLOBAL FOCUS STYLES (Accessibility)
+   ======================================== */
+
+/* Enhanced focus visible for all interactive elements */
+*:focus-visible {
+  outline: 3px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Remove default outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Specific focus styles for buttons */
+button:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* Specific focus styles for links */
+a:focus-visible {
+  outline: 3px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Specific focus styles for form inputs */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-color: var(--color-primary-500);
 }
 
 
@@ -531,14 +571,15 @@
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-xl);
+  background-color: var(--color-background);
+  padding: var(--space-4);
 }
 
 .hero__image {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
-  aspect-ratio: 3 / 2;
+  object-fit: contain;
 }
 
 
@@ -1392,11 +1433,35 @@
   background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-accent-50) 100%);
   border-radius: var(--radius-2xl);
   padding: var(--space-10) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.about__afu-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-lg);
+  max-width: 300px;
+  width: 100%;
+}
+
+.about__afu-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .about__afu-content {
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 
@@ -1464,6 +1529,18 @@
 
   .about__afu-relation {
     padding: var(--space-12) var(--space-10);
+    flex-direction: row;
+    gap: var(--space-12);
+  }
+
+  .about__afu-logo-wrapper {
+    max-width: 250px;
+    flex-shrink: 0;
+  }
+
+  .about__afu-content {
+    text-align: left;
+    margin: 0;
   }
 }
 
